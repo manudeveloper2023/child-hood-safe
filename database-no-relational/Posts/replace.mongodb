@@ -1,11 +1,11 @@
-use("chs")
-db.createCollection('Posts', {
+db.runCommand({
+    collMod : 'Posts' ,
     validator: {
         $jsonSchema: {
             bsonType: 'object',
-            required: ['_id', 'contenido','creador_post','titulo','fecha_publicacion'],
+            required: ['_id','comunidad' , 'contenido','creador_post','titulo','fecha_publicacion'],
             additionalProperties: false,
-            properties: { 
+            properties: {
                 _id: {
                     bsonType: 'objectId',
                     description: 'Identificador único del comentario'
@@ -87,7 +87,6 @@ db.createCollection('Posts', {
                 },
                 comentarios_ids: {
                     bsonType: 'array',
-                    minItems : 1 , 
                     items : {
                         bsonType  :'objectId'  
                     },
@@ -96,4 +95,4 @@ db.createCollection('Posts', {
             }
         }
     }
-});
+})

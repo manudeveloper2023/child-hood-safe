@@ -1,0 +1,116 @@
+db.runCommand(
+    {
+        collMod : 'Denuncia_Anonima',
+        validator: {
+            $jsonSchema: {
+                bsonType: 'object',
+                required: ['_id' ,'dificultad', 'ubigeo_id', 'descripcion_menor', 'fecha_registro_denuncia'],
+                additionalProperties: false,
+                properties: {
+                    _id: {
+                        bsonType: 'objectId',
+                        description: 'Identificador único del registro de denuncia'
+                    },
+                    descripcion: {
+                        bsonType: 'string',
+                        description: 'Descripción detallada de la situación reportada'
+                    },
+                    fecha_registro_denuncia: {
+                        bsonType: 'date',
+                        description: 'Fecha y hora en que se registró la denuncia'
+                    },
+                    ubigeo_id: { // Solo en perú
+                        bsonType : 'string',
+                        minLength : 6 , 
+                        maxLength : 6 , 
+                        descripcion : 'Id de la ubicacion de la denuncia'
+                    },
+                    descripcion_menor: {
+                        bsonType: 'object',
+                        required: ['sexo', 'prendas', 'aproximacion_edad', 'tonalidad_piel'],
+                        additionalProperties: false,
+                        properties: {
+                        sexo: {
+                            enum : ['F' , 'M'] , 
+                            description: 'Sexo del menor' 
+                        }, 
+                        aproximacion_edad: {
+                            bsonType: 'object',
+                            required: ['edad_menor', 'edad_mayor'],
+                            additionalProperties: false,
+                            properties: {
+                                edad_menor: {
+                                    bsonType: 'int',
+                                    minimum: 1,
+                                    maximum: 17,
+                                    description: 'Edad mínima aproximada del menor'
+                                },
+                                edad_mayor: {
+                                    bsonType: 'int',
+                                    minimum: 1,
+                                    maximum: 17,
+                                    description: 'Edad máxima aproximada del menor'
+                                }
+                            },
+                            description: 'Aproximación de edad del menor'
+                        }, 
+                        tonalidad_piel: {
+                            bsonType: 'string',
+                            maxLength : 20 , 
+                            description: 'Tonalidad de piel del menor'
+                        },
+                        estado_fisico: {
+                            bsonType: 'array',
+                            minItems: 1,
+                            uniqueItems: true,
+                            items: {
+                                bsonType: 'string',
+                                maxLength : 100 , 
+                                description: 'Estado físico del menor'
+                            },
+                            description: 'Lista de descripciones del estado físico del menor'
+                        }, 
+                        trabajo_ilegal: {
+                            bsonType: 'array',
+                            minItems: 1,
+                            uniqueItems: true,
+                            items: {
+                                bsonType: 'string',
+                                maxLength : 50 , 
+                                description: 'Tipos de trabajo ilegal del menor'
+                            },
+                            description: 'Lista de tipos de trabajo ilegal realizados por el menor'
+                        },
+                        prendas: {
+                            bsonType: 'object',
+                            required: ['descripcion_ropa'],
+                            additionalProperties: false,
+                            properties: {
+                                descripcion_ropa: {
+                                    bsonType: 'string',
+                                    description: 'Descripción de la ropa del menor'
+                                },
+                                estado_ropa: {
+                                    bsonType: 'array',
+                                    minItems: 1,
+                                    uniqueItems: true,
+                                    items: {
+                                        bsonType: 'string',
+                                        maxLength : 50 , 
+                                        description: 'Estado de la ropa del menor'
+                                    }
+                                }
+                            },
+                            description: 'Información sobre la vestimenta del menor'
+                        }
+                    },
+                    dificultad: {
+                        enum: ['Moderado', 'Desafiante'],
+                        description: 'Nivel de dificultad o gravedad de la situación reportada en la denuncia'
+                    }
+                }
+            }
+        }
+    }
+    }
+)

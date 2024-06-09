@@ -3,17 +3,16 @@ db.createCollection('Comunidad', {
     validator: {
         $jsonSchema: {
             bsonType: 'object',
-            required: ['_id','nombre', 'descripcion', 'fecha_creacion', 'creador'],
+            required: ['_id', 'nombre_comunidad', 'descripcion', 'fecha_creacion', 'creador_comunidad'],
             additionalProperties: false,
             properties: {
                 _id: {
                     bsonType: 'objectId',
-                    description: 'Identificador único del usuario'
+                    description: 'Identificador único de la comunidad'
                 },
-                nombre: {
+                nombre_comunidad: {
                     bsonType: 'string',
-                    description: 'El nombre de la comunidad, hasta un máximo de 100 caracteres.',
-                    maxLength: 100 
+                    description: 'Nombre de la comunidad, con un máximo de 100 caracteres.'
                 },
                 descripcion: {
                     bsonType: 'string',
@@ -21,9 +20,9 @@ db.createCollection('Comunidad', {
                 },
                 fecha_creacion: {
                     bsonType: 'date',
-                    description: 'La fecha en que se creó la comunidad.'
+                    description: 'Fecha de creación de la comunidad.'
                 },
-                creador: {
+                creador_comunidad: {
                     bsonType: 'object',
                     required: ['alias', 'user_id'],
                     additionalProperties: false,
@@ -31,16 +30,24 @@ db.createCollection('Comunidad', {
                     properties: {
                         alias: {
                             bsonType: 'string',
-                            description: 'Alias del creador, debe tener entre 8 y 30 caracteres.',
                             minLength: 8,
-                            maxLength: 30
+                            maxLength: 30,
+                            description: 'Alias del creador, entre 8 y 30 caracteres.'
                         },
                         user_id: {
                             bsonType: 'objectId',
-                            description: 'El ID de usuario del creador en formato ObjectId.'
-                        } 
-                        
+                            description: 'ID del usuario creador.'
+                        }
                     }
+                },
+                posts_ids: { // Inserción mediante updates 
+                    bsonType: 'array',
+                    minItems: 1,
+                    uniqueItems: true,
+                    items: {
+                        bsonType: 'objectId'
+                    },
+                    description: 'Lista de identificadores de posts asociados a la comunidad.'
                 }
             }
         }

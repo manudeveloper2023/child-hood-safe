@@ -1,0 +1,89 @@
+use("chs")
+db.createCollection('Comentario', {
+    validator: {
+        $jsonSchema: {
+            bsonType: 'object',
+            required: ['_id', 'nombre', 'descripcion', 'fecha_creacion', 'creador'],
+            additionalProperties: false,
+            properties: {
+                _id: {
+                    bsonType: 'objectId',
+                    description: 'Identificador único del comentario'
+                },
+                nombre: {
+                    bsonType: 'string',
+                    description: 'Nombre del comentario'
+                },
+                descripcion: {
+                    bsonType: 'string',
+                    description: 'Descripción del comentario'
+                },
+                fecha_creacion: {
+                    bsonType: 'date',
+                    description: 'Fecha de creación del comentario'
+                },
+                creador_comentario: {
+                    bsonType: 'object',
+                    required: ['alias', 'usuario_id'],
+                    additionalProperties: false,
+                    properties: {
+                        alias: {
+                            bsonType: 'string',
+                            minLength: 8,
+                            maxLength: 30,
+                            description: 'Nombre de usuario'
+                        },
+                        usuario_id: {
+                            bsonType: 'objectId',
+                            description: 'ID del usuario que creó el comentario'
+                        }
+                    }
+                },
+                post: {
+                    bsonType: 'object',
+                    required: ['titulo', 'post_id'],
+                    additionalProperties: false,
+                    properties: {
+                        titulo: {
+                            bsonType: 'string',
+                            maxLength: 100,
+                            description: 'Título del post'
+                        },
+                        post_id: {
+                            bsonType: 'objectId',
+                            description: 'ID del post relacionado al comentario'
+                        }
+                    }
+                },
+                respuestas: {
+                    bsonType: 'array',
+                    uniqueItems: true,
+                    items: {
+                        bsonType: 'object',
+                        required: ['_id', 'comentario', 'comentario_id'],
+                        additionalProperties: false,
+                        properties: {
+                            _id: {
+                                bsonType: 'objectId',
+                                description: 'ID único de la respuesta al comentario'
+                            },
+                            comentario: {
+                                bsonType: 'string',
+                                description: 'Texto de la respuesta al comentario'
+                            },
+                            comentario_id: {
+                                bsonType: 'objectId',
+                                description: 'ID del comentario al que se está respondiendo'
+                            }
+                        }
+                    },
+                    description: 'Respuestas al comentario'
+                },
+                fecha_publicado: {
+                    bsonType: 'date',
+                    description: 'Fecha en que se publicó el comentario'
+                }
+            }
+        }
+    }
+});

@@ -1,0 +1,58 @@
+use("chs")
+db.createCollection('Posts', {
+    validator: {
+        $jsonSchema: {
+            bsonType: 'object',
+            required: ['_id','comunidad' , 'usuario'],
+            additionalProperties: false,
+            properties: {
+                _id: {
+                    bsonType: 'objectId',
+                    description: 'Identificador único del comentario'
+                },
+                comunidad : {
+                    bsonType : 'object',
+                    required : ['nombre' , 'comunidad_id'],
+                    additionalProperties : false ,
+                    properties : {
+                        nombre : {
+                            bsonType: 'string',
+                            description: 'El nombre de la comunidad, hasta un máximo de 100 caracteres.',
+                            maxLength: 100 
+                        }, 
+                        comunidad_id : {
+                            bsonType : 'objectId' ,
+                        }
+                    }
+                } ,
+                creador_usuario : {
+                    bsonType : 'object' , 
+                    required : ['nombre' , 'comunidad_id'],
+                    additionalProperties : false ,
+                    properties : {
+                        alias : {
+                            bsonType: 'string',
+                            minLength : 8 , 
+                            maxLength : 30 ,  // Cantidad Maximo de caracteres
+                            description: 'Nombre de usuario'
+                        },
+                        usuario_id : {
+                            bsonType : 'objectID'
+                        }
+                    }
+                },
+                titulo : {
+                    bsonType : 'string' ,
+                    maxLength: 100,
+                    description: 'Título del post'
+                } , 
+                contenido : {
+                    bsonType : 'string'
+                },
+                fecha_publicacion : {
+                    bsonType : 'date'
+                }
+            }
+        }
+    }
+});

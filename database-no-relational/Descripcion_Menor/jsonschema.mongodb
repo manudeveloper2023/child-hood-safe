@@ -1,0 +1,88 @@
+use("chs");
+
+db.createCollection("Descripcion_Menor", {
+    validator: {
+        $jsonSchema: {
+            bsonType: 'object',
+            required: ['_id','sexo', 'prendas', 'aproximacion_edad', 'tonalidad_piel'],
+            additionalProperties: false,
+            properties: {
+                _id: {
+                    bsonType: 'objectId',
+                    description: 'Identificador único del usuario'
+                },
+                sexo: {
+                    enum : ['F' , 'M'] , 
+                    description: 'Sexo del menor' 
+                }, 
+                tonalidad_piel: {
+                    bsonType: 'string',
+                    maxLength : 20 , 
+                    description: 'Tonalidad de piel del menor'
+                },
+                trabajo_ilegal: {
+                    bsonType: 'array',
+                    minItems: 1,
+                    uniqueItems: true,
+                    items: {
+                        bsonType: 'string',
+                        maxLength : 50 , 
+                        description: 'Tipos de trabajo ilegal del menor'
+                    }
+                },
+                prendas: {
+                    bsonType: 'object',
+                    required: ['descripcion_ropa'],
+                    additionalProperties: false,
+                    properties: {
+                        descripcion_ropa: {
+                            bsonType: 'string',
+                            description: 'Descripción de la ropa del menor'
+                        },
+                        estado_ropa: {
+                            bsonType: 'array',
+                            minItems: 1,
+                            uniqueItems: true,
+                            items: {
+                                bsonType: 'string',
+                                maxLength : 50 , 
+                                description: 'Estado de la ropa del menor'
+                            }
+                        }
+                    },
+                    description: 'Prendas del menor'
+                },
+                aproximacion_edad: {
+                    bsonType: 'object',
+                    required: ['edad_menor', 'edad_mayor'],
+                    additionalProperties: false,
+                    properties: {
+                        edad_menor: {
+                            bsonType: 'int',
+                            minimum: 5,
+                            maximum: 17,
+                            description: 'Edad mínima aproximada del menor'
+                        },
+                        edad_mayor: {
+                            bsonType: 'int',
+                            minimum: 5,
+                            maximum: 17,
+                            description: 'Edad máxima aproximada del menor'
+                        }
+                    },
+                    description: 'Aproximación de edad del menor'
+                },
+                estado_fisico: {
+                    bsonType: 'array',
+                    minItems: 1,
+                    uniqueItems: true,
+                    items: {
+                        bsonType: 'string',
+                        maxLength : 100 , 
+                    },
+                    description: 'Estado físico del menor'
+                }
+            }
+        }
+    }
+});

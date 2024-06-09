@@ -1,0 +1,59 @@
+use("chs")
+db.createCollection("Denuncia_Anonima", {
+    validator: {
+        $jsonSchema: {
+            bsonType: 'object',
+            required: ['dificultad', 'ubigeo', 'descripcion_menor_id', 'usuario_id', 'fecha_registro_denuncia'],
+            additionalProperties: false,
+            properties: {
+                _id: {
+                    bsonType: 'objectId',
+                    description: 'Identificador único del usuario'
+                },
+                dificultad: {
+                    enum : ['Moderado' , 'Desafiante'], 
+                    description: 'Nivel de dificultad o gravedad de la situación reportada en la denuncia'
+                },
+                ubigeo: {
+                    bsonType: 'object',
+                    required: ['departamento', 'provincia', 'distrito'],
+                    additionalProperties: false,
+                    properties: {
+                        departamento: {
+                            bsonType: 'string',
+                            maxLength :15 , 
+                            description: 'Departamento donde ocurrió la situación reportada'
+                        },
+                        provincia: {
+                            bsonType: 'string',
+                            maxLength :30 , 
+                            description: 'Provincia donde ocurrió la situación reportada'
+                        },
+                        distrito: {
+                            bsonType: 'string',
+                            maxLength :30 , 
+                            description: 'Distrito donde ocurrió la situación reportada'
+                        }
+                    },
+                    description: 'Ubicación geográfica donde ocurrió la situación reportada'
+                },
+                descripcion_menor_id: {
+                    bsonType: 'objectId',
+                    description: 'ID del documento que describe al menor involucrado en la situación reportada'
+                },
+                usuario_id: {
+                    bsonType: 'objectId',
+                    description: 'ID del usuario que realiza la denuncia de manera anónima'
+                },
+                descripcion: {
+                    bsonType: 'string',
+                    description: 'Descripción detallada de la situación reportada'
+                },
+                fecha_registro_denuncia: {
+                    bsonType: 'date',
+                    description: 'Fecha y hora en que se registró la denuncia'
+                }
+            }
+        }
+    }
+});

@@ -1,0 +1,77 @@
+use("chs")
+
+db.createCollection('Usuario', {
+    validator: {
+        $jsonSchema: {
+            bsonType: 'object',
+            required: ['_id','alias', 'fecha_registro', 'contraseña'],
+            additionalProperties: false,
+            properties: {
+                _id: {
+                    bsonType: 'objectId',
+                    description: 'Identificador único del usuario'
+                },
+                alias: {
+                    bsonType: 'string',
+                    minLength : 8 , 
+                    maxLength : 30 ,  // Cantidad Maximo de caracteres
+                    description: 'Nombre de usuario'
+                },
+                fecha_registro: {
+                    bsonType: 'date',
+                    description: 'Fecha de registro del usuario'
+                },
+                contraseña: {
+                    bsonType: 'string',
+                    description: 'Contraseña del usuario',
+                    minLength : 12 , 
+                    maxLength : 30 ,  // Cantidad Maximo de caracteres
+                },
+                telefono: {
+                    bsonType: 'array',
+                    minItems: 1,
+                    uniqueItems: true,
+                    items: {
+                        bsonType: 'string',
+                        pattern: '^[^a-zA-Z]*$',
+                        minLength : 9 , // El numero telefonico solo tiene 9 caracteres en Perú
+                        maxLength : 9 , 
+                        description: 'Números de teléfono del usuario (solo dígitos)'
+                    },
+                    description: 'Lista de números de teléfono del usuario'
+                },
+                correo_electronico: {
+                    bsonType: 'array',
+                    minItems: 1,
+                    uniqueItems: true,
+                    items: {
+                        bsonType: 'string',
+                        description: 'Direcciones de correo electrónico del usuario'
+                    },
+                    description: 'Lista de direcciones de correo electrónico del usuario'
+                },
+                comunidades : {
+                    bsonType : 'array',
+                    uniqueItems: true,
+                    items : {
+                        bsonType : 'object',
+                        required: ['nombre','comunidad_id'],
+                        additionalProperties: false,
+                        properties: {
+                        nombre: {
+                            bsonType: 'string',
+                            description: 'El nombre de la comunidad, hasta un máximo de 100 caracteres.',
+                            maxLength: 100 
+                        },
+                        comunidad_id : {
+                            bsonType : 'objectId',
+                            description : 'Id de las comunidad que pertenece el usuario'
+                        }
+                        }
+                    },
+                    description : 'Lista de Comunidades que pertenece el usuario'
+                }
+            }
+        }
+    }
+});

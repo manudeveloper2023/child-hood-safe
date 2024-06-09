@@ -1,0 +1,29 @@
+use("chs")
+db.createCollection('Categorias', {
+    validator: {
+        $jsonSchema: {
+            bsonType: 'object',
+            required: ['_id', 'categoria' , 'posts_ids'],
+            additionalProperties: false,
+            properties: {
+                _id: {
+                    bsonType: 'objectId',
+                    description: 'Identificador único de la categoría'
+                },
+                categoria: {
+                    bsonType: 'string',
+                    maxLength: 100,
+                    description: 'Nombre de la categoría'
+                },
+                posts_ids : { // Inserción mediante updates de nuevos posts 
+                    bsonType : 'array', 
+                    uniqueItems: true, 
+                    minItems : 1 ,  
+                    items : {
+                        bsonType  :'objectId'
+                    }
+                }
+            }
+        }
+    }
+});

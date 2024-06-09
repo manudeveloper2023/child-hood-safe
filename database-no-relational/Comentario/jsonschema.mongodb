@@ -3,24 +3,12 @@ db.createCollection('Comentario', {
     validator: {
         $jsonSchema: {
             bsonType: 'object',
-            required: ['_id', 'nombre', 'descripcion', 'fecha_creacion', 'creador'],
+            required: ['_id','comentario' ,'creador_comentario', 'fecha_publicado'],
             additionalProperties: false,
             properties: {
                 _id: {
                     bsonType: 'objectId',
                     description: 'Identificador único del comentario'
-                },
-                nombre: {
-                    bsonType: 'string',
-                    description: 'Nombre del comentario'
-                },
-                descripcion: {
-                    bsonType: 'string',
-                    description: 'Descripción del comentario'
-                },
-                fecha_creacion: {
-                    bsonType: 'date',
-                    description: 'Fecha de creación del comentario'
                 },
                 creador_comentario: {
                     bsonType: 'object',
@@ -39,42 +27,17 @@ db.createCollection('Comentario', {
                         }
                     }
                 },
-                post: {
-                    bsonType: 'object',
-                    required: ['titulo', 'post_id'],
-                    additionalProperties: false,
-                    properties: {
-                        titulo: {
-                            bsonType: 'string',
-                            maxLength: 100,
-                            description: 'Título del post'
-                        },
-                        post_id: {
-                            bsonType: 'objectId',
-                            description: 'ID del post relacionado al comentario'
-                        }
-                    }
+                comentario : {
+                    bsonType : 'string' , 
+                    description : 'Comentario con caracteres ilimitados'
                 },
                 respuestas: {
                     bsonType: 'array',
                     uniqueItems: true,
+                    minItems: 1,
                     items: {
-                        bsonType: 'object',
-                        required: ['_id', 'comentario', 'comentario_id'],
-                        additionalProperties: false,
-                        properties: {
-                            _id: {
-                                bsonType: 'objectId',
-                                description: 'ID único de la respuesta al comentario'
-                            },
-                            comentario: {
-                                bsonType: 'string',
-                                description: 'Texto de la respuesta al comentario'
-                            },
-                            comentario_id: {
-                                bsonType: 'objectId',
-                                description: 'ID del comentario al que se está respondiendo'
-                            }
+                        bsonType: 'objectId', 
+                        description : 'Ids de los comentarios que realizaron una respuesta al comentario'
                         }
                     },
                     description: 'Respuestas al comentario'
@@ -85,5 +48,4 @@ db.createCollection('Comentario', {
                 }
             }
         }
-    }
-});
+    });

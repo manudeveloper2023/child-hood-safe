@@ -1,4 +1,6 @@
-db.createCollection('Usuario', {
+use("chs")
+db.runCommand({
+    collMod : 'Usuario' ,
     validator: {
         $jsonSchema: {
             bsonType: 'object',
@@ -71,4 +73,4 @@ db.createCollection('Usuario', {
             }
         }
     }
-});
+})

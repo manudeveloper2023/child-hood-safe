@@ -1,0 +1,44 @@
+use("chs")
+
+db.Comunidad.updateOne(
+    { "_id": ObjectId("60c34fb0f0248b55348f6861") }, 
+    { $push: { 
+        "posts_ids": { 
+            $each: [
+                ObjectId("648e699dcf6d747f2e76ee02"),
+                ObjectId("648e699dcf6d747f2e76ee06"),
+                ObjectId("648e699dcf6d747f2e76ee08")
+            ]
+        } 
+    } 
+    }
+);
+db.Comunidad.updateOne(
+    { "_id": ObjectId("60c34fb0f0248b55348f6862") }, 
+    { $push: { 
+        "posts_ids": { 
+            $each: [
+                ObjectId("648e699dcf6d747f2e76ee0a"),
+                ObjectId("648e699dcf6d747f2e76ee0c"),
+                ObjectId("648e699dcf6d747f2e76ee11"),
+                ObjectId("648e699dcf6d747f2e76ee13")
+            ]
+        } 
+    } 
+    }
+);
+
+db.Comunidad.updateOne
+(
+    { "_id": ObjectId("60c34fb0f0248b55348f6865") }, 
+    { $push: { 
+        "posts_ids": { 
+            $each: [
+                ObjectId("648e699dcf6d747f2e76ee09"),
+                ObjectId("648e699dcf6d747f2e76ee10"),
+                ObjectId("648e699dcf6d747f2e76ee03")
+            ]
+        } 
+    } 
+    }
+)

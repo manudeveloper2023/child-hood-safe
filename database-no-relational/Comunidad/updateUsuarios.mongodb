@@ -1,0 +1,43 @@
+use("chs")
+
+db.Comunidad.updateOne(
+    { "_id": ObjectId("60c34fb0f0248b55348f6861") }, 
+    { $push: { 
+        "usuarios_ids": { 
+            $each: [
+                ObjectId("6666f77c0737080b4cd69bfe"),
+                ObjectId("6666f77c0737080b4cd69c0c"),
+                ObjectId("6666f77c0737080b4cd69c02"),
+            ]
+        } 
+    } 
+    }
+);
+db.Comunidad.updateOne(
+    { "_id": ObjectId("60c34fb0f0248b55348f6862") }, 
+    { $push: { 
+        "usuarios_ids": { 
+            $each: [
+                ObjectId("6666f77c0737080b4cd69c06"),
+                ObjectId("6666f77c0737080b4cd69c03"),
+                ObjectId("6666f77c0737080b4cd69c0d"),
+                ObjectId("6666f77c0737080b4cd69c0e")
+            ]
+        } 
+    } 
+    }
+);
+db.Comunidad.updateOne
+(
+    { _id : ObjectId("60c34fb0f0248b55348f6864")} ,
+    { $push: { 
+        "usuarios_ids": { 
+            $each: [
+                ObjectId("6666f77c0737080b4cd69c0a"),
+                ObjectId("6666f77c0737080b4cd69c05"),
+                ObjectId("6666f77c0737080b4cd69c09")
+            ]
+        } 
+    } 
+    }
+)

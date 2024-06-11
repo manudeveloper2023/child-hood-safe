@@ -1,0 +1,10 @@
+use("chs")
+db.Ubigeo.aggregate
+(
+    [{
+        $project : {
+            departamento : 0 , provincia : 0 , distrito : 0
+        }
+        }
+    ]
+)

@@ -1,0 +1,212 @@
+use("chs")
+
+db.Comunidad.insertMany
+(
+    [
+        {
+            _id: ObjectId("60c34fb0f0248b55348f6861"),
+            nombre_comunidad: "Reporte de Trabajo Infantil",
+            descripcion: "Comunidad dedicada a la denuncia y reporte de casos de trabajo infantil. Aquí trabajamos juntos para proteger los derechos de los niños y niñas, brindando un espacio seguro para reportar casos de explotación laboral infantil.",
+            fecha_creacion: new Date(),
+            creador_comunidad: {
+                alias: "juanito_perez",
+                user_id: ObjectId("6666f77c0737080b4cd69bfd")
+            },
+            usuarios_ids: [],
+            posts_ids: []
+        },
+        {
+            _id: ObjectId("60c34fb0f0248b55348f6862"),
+            nombre_comunidad: "Lucha contra el Trabajo Infantil",
+            descripcion: "Únete a nuestra comunidad para luchar contra el trabajo infantil. Aquí compartimos información, recursos y apoyo mutuo para combatir esta problemática y proteger a los niños y niñas de todo tipo de explotación laboral.",
+            fecha_creacion: new Date(),
+            creador_comunidad: {
+                alias: "laura_garcia",
+                user_id: ObjectId("6666f77c0737080b4cd69bfe")
+            },
+            usuarios_ids: [],
+            posts_ids: []
+        },
+        {
+            _id: ObjectId("60c34fb0f0248b55348f6863"),
+            nombre_comunidad: "Prevención del Trabajo Infantil",
+            descripcion: "Comunidad dedicada a la prevención del trabajo infantil. Nuestro objetivo es educar, concienciar y tomar medidas preventivas para evitar que los niños y niñas sean víctimas de la explotación laboral.",
+            fecha_creacion: new Date(),
+            creador_comunidad: {
+                alias: "carlos_rodriguez",
+                user_id: ObjectId("6666f77c0737080b4cd69bff")
+            },
+            usuarios_ids: [],
+            posts_ids: []
+        },
+        {
+            _id: ObjectId("60c34fb0f0248b55348f6864"),
+            nombre_comunidad: "Derechos de la Infancia",
+            descripcion: "Únete a nuestra comunidad para promover y proteger los derechos de la infancia. Aquí discutimos, compartimos información y actuamos para garantizar un futuro seguro y saludable para todos los niños y niñas.",
+            fecha_creacion: new Date(),
+            creador_comunidad: {
+                alias: "ana_martinez",
+                user_id: ObjectId("6666f77c0737080b4cd69c00")
+            },
+            usuarios_ids: [],
+            posts_ids: []
+        },
+        {
+            _id: ObjectId("60c34fb0f0248b55348f6865"),
+            nombre_comunidad: "Comunidad contra el Abuso Infantil",
+            descripcion: "Juntos podemos detener el abuso infantil. Únete a nuestra comunidad para denunciar, apoyar y trabajar en la prevención del abuso y la explotación de los niños y niñas.",
+            fecha_creacion: new Date(),
+            creador_comunidad: {
+                alias: "david_sanchez",
+                user_id: ObjectId("6666f77c0737080b4cd69c01")
+            },
+            usuarios_ids: [],
+            posts_ids: []
+        },
+        {
+            _id: ObjectId("60c34fb0f0248b553434f866"),
+            nombre_comunidad: "Niñez Protegida",
+            descripcion: "Comunidad dedicada a proteger a los niños y niñas de todo tipo de abuso y explotación. Aquí nos unimos para crear conciencia, brindar apoyo y actuar en defensa de los derechos de la infancia.",
+            fecha_creacion: new Date(),
+            creador_comunidad: {
+                alias: "sara_gomez",
+                user_id: ObjectId("6666f77c0737080b4cd69c02")
+            },
+            usuarios_ids: [],
+            posts_ids: []
+        },
+        {
+            _id: ObjectId("60c34fb0f0248b55348f1117"),
+            nombre_comunidad: "Protección Infantil",
+            descripcion: "Únete a nuestra comunidad para proteger a los niños y niñas de cualquier forma de abuso, explotación y discriminación. Juntos podemos crear un entorno seguro y saludable para todos los niños y niñas.",
+            fecha_creacion: new Date(),
+            creador_comunidad: {
+                alias: "sergio_fernandez",
+                user_id: ObjectId("6666f77c0737080b4cd69c03")
+            },
+            usuarios_ids: [],
+            posts_ids: []
+        },
+        {
+            _id: ObjectId("60c34fb0f0248b55348f6868"),
+            nombre_comunidad: "Comunidad por una Infancia Libre",
+            descripcion: "Únete a nosotros para trabajar en la erradicación del trabajo infantil y la promoción de una infancia libre de explotación laboral. Juntos podemos crear un mundo donde todos los niños y niñas puedan crecer y desarrollarse sin miedo ni privaciones.",
+            fecha_creacion: new Date(),
+            creador_comunidad: {
+                alias: "maria_lopez",
+                user_id: ObjectId("6666f77c0737080b4cd69c04")
+            },
+            usuarios_ids: [],
+            posts_ids: []
+        },
+        {
+            _id: ObjectId("60c34fb0f0248b55328f1869"),
+            nombre_comunidad: "Comunidad Infantil Solidaria",
+            descripcion: "Esta comunidad está dedicada a promover la solidaridad y el apoyo entre los niños y niñas de todo el mundo. Únete a nosotros para compartir experiencias, ideas y soluciones para construir un futuro más justo y solidario.",
+            fecha_creacion: new Date(),
+            creador_comunidad: {
+                alias: "javier_martin",
+                user_id: ObjectId("6666f77c0737080b4cd69c05")
+            },
+            usuarios_ids: [],
+            posts_ids: []
+        },
+        {
+            _id: ObjectId("60c34fb0f0248b55348f6866"),
+            nombre_comunidad: "Comunidad por la Educación Infantil",
+            descripcion: "Nuestra comunidad se enfoca en garantizar el acceso universal a una educación de calidad para todos los niños y niñas. Únete a nosotros para promover la educación como un derecho fundamental y una herramienta poderosa para combatir el trabajo infantil.",
+            fecha_creacion: new Date(),
+            creador_comunidad: {
+                alias: "natalia_diaz",
+                user_id: ObjectId("6666f77c0737080b4cd69c06")
+            },
+            usuarios_ids: [],
+            posts_ids: []
+        },
+        {
+            _id: ObjectId("60c34fb0f0248b55348f6867"),
+            nombre_comunidad: "Comunidad por la Justicia Infantil",
+            descripcion: "Juntos luchamos por la justicia y los derechos de los niños y niñas. Únete a nosotros para denunciar casos de injusticia, apoyar a las víctimas y promover un sistema judicial justo y equitativo para los más pequeños.",
+            fecha_creacion: new Date(),
+            creador_comunidad: {
+                alias: "pedro_ramirez",
+                user_id: ObjectId("6666f77c0737080b4cd69c07")
+            },
+            usuarios_ids: [],
+            posts_ids: []
+        },
+        {
+            _id: ObjectId("60c34fb0f0248b55348f1568"),
+            nombre_comunidad: "Comunidad de Protección Infantil",
+            descripcion: "Esta comunidad está comprometida con la protección y el bienestar de los niños y niñas en todo el mundo. Únete a nosotros para denunciar abusos, compartir recursos y trabajar juntos en la prevención del maltrato infantil.",
+            fecha_creacion: new Date(),
+            creador_comunidad: {
+                alias: "lucia_morales",
+                user_id: ObjectId("6666f77c0737080b4cd69c08")
+            },
+            usuarios_ids: [],
+            posts_ids: []
+        },
+        {
+            _id: ObjectId("60c34fb0f0248b55348f6869"),
+            nombre_comunidad: "Alianza por la Infancia",
+            descripcion: "Únete a nuestra alianza para proteger y promover los derechos de los niños y niñas en todo el mundo. Trabajamos para crear un entorno seguro y protector donde todos los niños puedan crecer felices y saludables.",
+            fecha_creacion: new Date(),
+            creador_comunidad: {
+                alias: "alberto_gonzalez",
+                user_id: ObjectId("6666f77c0737080b4cd69c09")
+            },
+            usuarios_ids: [],
+            posts_ids: []
+        },
+        {
+            _id: ObjectId("60c34fb0f0248b55348f6870"),
+            nombre_comunidad: "Comunidad Pro-Infancia",
+            descripcion: "Nos dedicamos a promover políticas y programas que beneficien a la infancia y combatan el trabajo infantil. Únete a nosotros para hacer oír tu voz y contribuir a la construcción de un mundo más justo y equitativo para todos los niños.",
+            fecha_creacion: new Date(),
+            creador_comunidad: {
+                alias: "paula_ruiz",
+                user_id: ObjectId("6666f77c0737080b4cd69c0a")
+            },
+            usuarios_ids: [],
+            posts_ids: []
+        },
+        {
+            _id: ObjectId("60c34fb0f0248b55348f6871"),
+            nombre_comunidad: "Comunidad por la Niñez Feliz",
+            descripcion: "Creemos en la importancia de una infancia feliz y sin preocupaciones. Únete a nuestra comunidad para compartir ideas, recursos y apoyo mutuo en la lucha contra el trabajo infantil y la promoción del bienestar infantil.",
+            fecha_creacion: new Date(),
+            creador_comunidad: {
+                alias: "diego_hernandez",
+                user_id: ObjectId("6666f77c0737080b4cd69c0b")
+            },
+            usuarios_ids: [],
+            posts_ids: []
+        },
+        {
+            _id: ObjectId("60c34fb0f0248b55348f6872"),
+            nombre_comunidad: "Comunidad por una Infancia Segura",
+            descripcion: "Nuestro objetivo es garantizar la seguridad y protección de todos los niños y niñas. Únete a nosotros para denunciar situaciones de riesgo, compartir consejos de seguridad y trabajar juntos en la prevención del abuso y la explotación infantil.",
+            fecha_creacion: new Date(),
+            creador_comunidad: {
+                alias: "patricia_fernandez",
+                user_id: ObjectId("6666f77c0737080b4cd69c0c")
+            },
+            usuarios_ids: [],
+            posts_ids: []
+        },
+        {
+            _id: ObjectId("60c34fb0f0248b55348f6873"),
+            nombre_comunidad: "Comunidad por la Protección Infantil",
+            descripcion: "Nos dedicamos a proteger los derechos y la dignidad de todos los niños y niñas. Únete a nosotros para denunciar abusos, promover la prevención y sensibilizar sobre los derechos de la infancia en todo el mundo.",
+            fecha_creacion: new Date(),
+            creador_comunidad: {
+                alias: "alejandro_garcia",
+                user_id: ObjectId("6666f77c0737080b4cd69c0d")
+            },
+            usuarios_ids: [],
+            posts_ids: []
+        }
+    ]
+)
+db.Comunidad.countDocuments()

@@ -1,0 +1,264 @@
+use("chs");
+
+db.Posts.insertMany([
+    {
+        _id: ObjectId("648e699dcf6d747f2e76ee01"),
+        titulo: 'Trabajo infantil en las granjas',
+        contenido: 'Muchos niños trabajan largas horas en las granjas sin recibir educación adecuada.',
+        fecha_publicacion: new Date(),
+        creador_post: {
+            alias: 'juanito_perez',
+            usuario_id: ObjectId("6666f77c0737080b4cd69bfd")
+        },
+        categorias: ['Agricultura', 'Educación', 'Derechos Humanos'],
+        etiquetas: ['trabajo infantil', 'educación'],
+        comentarios_ids: []
+    },
+    {
+        _id: ObjectId("648e699dcf6d747f2e76ee02"),
+        titulo: 'Niños en fábricas textiles',
+        contenido: 'Documentando las condiciones de los niños que trabajan en las fábricas textailes.',
+        fecha_publicacion: new Date(),
+        creador_post: {
+            alias: 'maria_lopez',
+            usuario_id: ObjectId("6666f77c0737080b4cd69c04")
+        },
+        categorias: ['Industria Textil', 'Derechos Laborales', 'Derechos Humanos'],
+        etiquetas: ['condiciones laborales', 'trabajo infantil'],
+        comentarios_ids: []
+    },
+    {
+        _id: ObjectId("648e699dcf6d747f2e76ee03"),
+        titulo: 'Impacto del trabajo infantil en la salud',
+        contenido: 'Explorando los efectos negativos del trabajo infantil en la salud física y mental de los niños.',
+        fecha_publicacion: new Date(),
+        creador_post: {
+            alias: 'alberto_gonzalez',
+            usuario_id: ObjectId("6666f77c0737080b4cd69c09")
+        },
+        categorias: ['Salud', 'Psicología', 'Derechos Humanos'],
+        etiquetas: ['salud infantil', 'trabajo infantil'],
+        comentarios_ids: []
+    },
+    {
+        _id: ObjectId("648e699dcf6d747f2e76ee04"),
+        titulo: 'Niños mineros en América Latina',
+        contenido: 'Un análisis sobre los riesgos y las condiciones de los niños que trabajan en las minas.',
+        fecha_publicacion: new Date(),
+        creador_post: {
+            alias: 'pedro_ramirez',
+            usuario_id: ObjectId("6666f77c0737080b4cd69c07")
+        },
+        categorias: ['Minería', 'Seguridad', 'Derechos Humanos'],
+        etiquetas: ['trabajo infantil', 'minería'],
+        comentarios_ids: []
+    },
+    {
+        _id: ObjectId("648e699dcf6d747f2e76ee05"),
+        titulo: 'El trabajo infantil en el comercio informal',
+        contenido: 'Investigación sobre los niños que trabajan en mercados y calles vendiendo productos.',
+        fecha_publicacion: new Date(),
+        creador_post: {
+            alias: 'lucia_morales',
+            usuario_id: ObjectId("6666f77c0737080b4cd69c08")
+        },
+        categorias: ['Comercio', 'Economía Informal', 'Derechos Humanos'],
+        etiquetas: ['mercados', 'trabajo infantil'],
+        comentarios_ids: []
+    },
+    {
+        _id: ObjectId("648e699dcf6d747f2e76ee06"),
+        titulo: 'Historias de niños trabajadores domésticos',
+        contenido: 'Relatos de niños que trabajan como empleados domésticos en diferentes partes del mundo.',
+        fecha_publicacion: new Date(),
+        creador_post: {
+            alias: 'patricia_fernandez',
+            usuario_id: ObjectId("6666f77c0737080b4cd69c0c")
+        },
+        categorias: ['Trabajo Doméstico', 'Historias de Vida', 'Derechos Humanos'],
+        etiquetas: ['trabajo infantil', 'empleados domésticos'],
+        comentarios_ids: []
+    },
+    {
+        _id: ObjectId("648e699dcf6d747f2e76ee07"),
+        titulo: 'Impacto económico del trabajo infantil',
+        contenido: 'Cómo el trabajo infantil afecta las economías locales y nacionales.',
+        fecha_publicacion: new Date(),
+        creador_post: {
+            alias: 'diego_hernandez',
+            usuario_id: ObjectId("6666f77c0737080b4cd69c0b")
+        },
+        categorias: ['Economía', 'Desarrollo Social', 'Derechos Humanos'],
+        etiquetas: ['impacto económico', 'trabajo infantil'],
+        comentarios_ids: []
+    },
+    {
+        _id: ObjectId("648e699dcf6d747f2e76ee08"),
+        titulo: 'Intervenciones para erradicar el trabajo infantil',
+        contenido: 'Examinando las políticas y programas exitosos para reducir el trabajo infantil.',
+        fecha_publicacion: new Date(),
+        creador_post: {
+            alias: 'sara_gomez',
+            usuario_id: ObjectId("6666f77c0737080b4cd69c02")
+        },
+        categorias: ['Políticas Sociales', 'Educación', 'Derechos Humanos'],
+        etiquetas: ['erradicación', 'trabajo infantil'],
+        comentarios_ids: []
+    },
+    {
+        _id: ObjectId("648e699dcf6d747f2e76ee09"),
+        titulo: 'Educación como herramienta contra el trabajo infantil',
+        contenido: 'La importancia de la educación en la prevención del trabajo infantil.',
+        fecha_publicacion: new Date(),
+        creador_post: {
+            alias: 'paula_ruiz',
+            usuario_id: ObjectId("6666f77c0737080b4cd69c0a")
+        },
+        categorias: ['Educación', 'Prevención', 'Derechos Humanos'],
+        etiquetas: ['prevención', 'trabajo infantil'],
+        comentarios_ids: []
+    },
+    {
+        _id: ObjectId("648e699dcf6d747f2e76ee0a"),
+        titulo: 'Experiencias de vida: niños trabajadores',
+        contenido: 'Entrevistas y relatos de vida de niños que han trabajado desde temprana edad.',
+        fecha_publicacion: new Date(),
+        creador_post: {
+            alias: 'natalia_diaz',
+            usuario_id: ObjectId("6666f77c0737080b4cd69c06")
+        },
+        categorias: ['Historias de Vida', 'Sociedad', 'Derechos Humanos'],
+        etiquetas: ['experiencias', 'trabajo infantil'],
+        comentarios_ids: []
+    },
+    {
+        _id: ObjectId("648e699dcf6d747f2e76ee0b"),
+        titulo: 'Normativas legales sobre el trabajo infantil',
+        contenido: 'Un análisis de las leyes y regulaciones sobre el trabajo infantil en diferentes países.',
+        fecha_publicacion: new Date(),
+        creador_post: {
+            alias: 'carlos_rodriguez',
+            usuario_id: ObjectId("6666f77c0737080b4cd69bff")
+        },
+        categorias: ['Legislación', 'Políticas Públicas', 'Derechos Humanos'],
+        etiquetas: ['leyes', 'trabajo infantil'],
+        comentarios_ids: []
+    },
+    {
+        _id: ObjectId("648e699dcf6d747f2e76ee0c"),
+        titulo: 'Trabajo infantil en la industria pesquera',
+        contenido: 'Condiciones de los niños que trabajan en la industria pesquera.',
+        fecha_publicacion: new Date(),
+        creador_post: {
+            alias: 'sergio_fernandez',
+            usuario_id: ObjectId("6666f77c0737080b4cd69c03")
+        },
+        categorias: ['Industria Pesquera', 'Seguridad', 'Derechos Humanos'],
+        etiquetas: ['condiciones laborales', 'trabajo infantil'],
+        comentarios_ids: []
+    },
+    {
+        _id: ObjectId("648e699dcf6d747f2e76ee0d"),
+        titulo: 'Niños en la producción de cacao',
+        contenido: 'Impacto del trabajo infantil en la producción de cacao en África.',
+        fecha_publicacion: new Date(),
+        creador_post: {
+            alias: 'ana_martinez',
+            usuario_id: ObjectId("6666f77c0737080b4cd69c00")
+        },
+        categorias: ['Agricultura', 'Economía', 'Derechos Humanos'],
+        etiquetas: ['cacao', 'trabajo infantil'],
+        comentarios_ids: []
+    },
+    {
+        _id: ObjectId("648e699dcf6d747f2e76ee0e"),
+        titulo: 'Condiciones laborales en talleres clandestinos',
+        contenido: 'Investigación sobre los niños que trabajan en talleres clandestinos de confección.',
+        fecha_publicacion: new Date(),
+        creador_post: {
+            alias: 'laura_garcia',
+            usuario_id: ObjectId("6666f77c0737080b4cd69bfe")
+        },
+        categorias: ['Industria Textil', 'Derechos Laborales', 'Derechos Humanos'],
+        etiquetas: ['talleres clandestinos', 'trabajo infantil'],
+        comentarios_ids: []
+    },
+    {
+        _id: ObjectId("648e699dcf6d747f2e76ee0f"),
+        titulo: 'Trabajo infantil en el sector de la construcción',
+        contenido: 'Riesgos y condiciones de los niños que trabajan en la construcción.',
+        fecha_publicacion: new Date(),
+        creador_post: {
+            alias: 'jose_ramirez',
+            usuario_id: ObjectId("6666f77c0737080b4cd69c10")
+        },
+        categorias: ['Construcción', 'Seguridad', 'Derechos Humanos'],
+        etiquetas: ['trabajo infantil', 'seguridad'],
+        comentarios_ids: []
+    },
+    {
+        _id: ObjectId("648e699dcf6d747f2e76ee10"),
+        titulo: 'Niños en la producción de ladrillos',
+        contenido: 'Las duras condiciones de los niños que fabrican ladrillos en zonas rurales.',
+        fecha_publicacion: new Date(),
+        creador_post: {
+            alias: 'javier_martin',
+            usuario_id: ObjectId("6666f77c0737080b4cd69c05")
+        },
+        categorias: ['Producción', 'Industria', 'Derechos Humanos'],
+        etiquetas: ['trabajo infantil', 'producción de ladrillos'],
+        comentarios_ids: []
+    },
+    {
+        _id: ObjectId("648e699dcf6d747f2e76ee11"),
+        titulo: 'Trabajo infantil en la recolección de basura',
+        contenido: 'Niños que trabajan en vertederos y las implicaciones para su salud y seguridad.',
+        fecha_publicacion: new Date(),
+        creador_post: {
+            alias: 'alejandro_garcia',
+            usuario_id: ObjectId("6666f77c0737080b4cd69c0d")
+        },
+        categorias: ['Reciclaje', 'Salud', 'Derechos Humanos'],
+        etiquetas: ['trabajo infantil', 'recolección de basura'],
+        comentarios_ids: []
+    },
+    {
+        _id: ObjectId("648e699dcf6d747f2e76ee12"),
+        titulo: 'Trabajo infantil en plantaciones de tabaco',
+        contenido: 'Exposición de los niños a los peligros del trabajo en plantaciones de tabaco.',
+        fecha_publicacion: new Date(),
+        creador_post: {
+            alias: 'david_sanchez',
+            usuario_id: ObjectId("6666f77c0737080b4cd69c01")
+        },
+        categorias: ['Agricultura', 'Salud', 'Derechos Humanos'],
+        etiquetas: ['trabajo infantil', 'plantaciones de tabaco'],
+        comentarios_ids: []
+    },
+    {
+        _id: ObjectId("648e699dcf6d747f2e76ee13"),
+        titulo: 'Niños en la minería de oro',
+        contenido: 'Condiciones peligrosas para los niños que trabajan en minas de oro.',
+        fecha_publicacion: new Date(),
+        creador_post: {
+            alias: 'luis_perez',
+            usuario_id: ObjectId("6666f77c0737080b4cd69c0e")
+        },
+        categorias: ['Minería', 'Seguridad', 'Derechos Humanos'],
+        etiquetas: ['trabajo infantil', 'minería de oro'],
+        comentarios_ids: []
+    },
+    {
+        _id: ObjectId("648e699dcf6d747f2e76ee14"),
+        titulo: 'Trabajo infantil en la producción de café',
+        contenido: 'Condiciones laborales de los niños que trabajan en la producción de café.',
+        fecha_publicacion: new Date(),
+        creador_post: {
+            alias: 'marta_martin',
+            usuario_id: ObjectId("6666f77c0737080b4cd69c0f")
+        },
+        categorias: ['Agricultura', 'Economía', 'Derechos Humanos'],
+        etiquetas: ['trabajo infantil', 'producción de café'],
+        comentarios_ids: []
+    }
+]);

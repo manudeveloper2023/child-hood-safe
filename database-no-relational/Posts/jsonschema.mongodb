@@ -1,93 +1,73 @@
 use("chs")
+db.Posts.drop()
 db.createCollection('Posts', {
     validator: {
         $jsonSchema: {
             bsonType: 'object',
-            required: ['_id', 'contenido','creador_post','titulo','fecha_publicacion'],
+            required: ['_id', 'contenido','creador_post','titulo','fecha_publicacion' , 'comentarios_ids'],
             additionalProperties: false,
             properties: { 
                 _id: {
                     bsonType: 'objectId',
                     description: 'Identificador único del comentario'
                 }, 
-                titulo : {
+                titulo : { // Rango : [ 0 - 100 ] caracteres
                     bsonType : 'string' ,
                     maxLength: 100,
                     description: 'Título del post que tiene un máximo de caracteres de 100 '
                 } , 
                 contenido : {
                     bsonType : 'string',
-                    description : 'Contenido de los posts que no tiene límite de caracteres'
+                    description : 'Contenido de los posts'
                 },
                 fecha_publicacion : {
                     bsonType : 'date',
                     description : 'Campo que nombra la fecha de la publicación'
                 },
-                creador_post : {
+                creador_post : { // Desnormalizado | Relacion 1 a 1  | Un post cuando se crea posee un usuario obligatoriamente 
                     bsonType : 'object' , 
                     required : ['alias' , 'usuario_id'],
                     additionalProperties : false ,
                     properties : {
-                        alias : {
+                        alias : { // Rango [ 8 - 30 ]
                             bsonType: 'string',
                             minLength : 8 , 
-                            maxLength : 30 ,  // Cantidad Maximo de caracteres
+                            maxLength : 30 ,  
                             description: 'Nombre de usuario'
-                        },
+                        }, 
                         usuario_id : {
-                            bsonType : 'objectID', 
+                            bsonType : 'objectId', 
                             description : 'ID del usuario'
                         }
                     }, 
                     description : 'Datos del creador del post'
                 },
-                categorias : {
+                categorias : { // Desnormalizado | Relacion 1 a pocos | Un post cuando se crea puede poseer categorias | Rango : [ 1 - 5 ] elementos
                     bsonType : 'array' , 
                     uniqueItems: true, 
-                    minItems: 1,
-                    items : {
-                        bsonType : 'object',
-                        required : ['categoria' , 'categoria_id'] ,
-                        additionalProperties : false ,
-                        properties : {
-                            categoria: {
-                                bsonType: 'string',
-                                maxLength: 100,
-                                description: 'Nombre de la categoría'
-                            },
-                            categoria_id : {
-                                bsonType : 'objectId'
-                            }
-                        },
-                        description: 'El Id de la categoria, hasta un máximo de 100 caracteres.'
+                    minItems : 1 ,
+                    maxItems : 5 , 
+                    items : { // Rango [ 0 , 100 ] caracteres
+                        bsonType: 'string',
+                        maxLength: 100,
+                        description: 'Nombre de la categoría'
                     }, 
                     description : 'Lista de los nombres de las  categorias con valores únicos y el mínimo de 1 solo valor'
                 },
-                etiquetas : {
+                etiquetas : { // Desnormalizado | Relacion 1 a pocos | Un post cuando se crea puede poseer etiquetas | Rango : [ 1 - 10 ] elementos 
                     bsonType : 'array' , 
                     uniqueItems : true , 
-                    minItems: 1,
-                    items : {
-                        bsonType : 'object',
-                        required : ['categoria' , 'categoria_id'] ,
-                        additionalProperties : false ,
-                        properties : {
-                            etiquetas: {
-                                bsonType: 'string',
-                                maxLength: 100,
-                                description: 'Nombre de la categoría'
-                            },
-                            etiquetas_id : {
-                                bsonType : 'objectId' 
-                                
-                            }
-                        },
+                    minItems : 1 , 
+                    maxItems : 10 , 
+                    items : { // Rango [ 0 , 100 ] caracteres   
+                        bsonType : 'string' ,   
+                        maxLength: 100,
+                        description: 'Nombre de la etiqueta'
                     } , 
                     description : 'Lista de los nombres de las etiquetas con valores únicos y el mínimo de 1 solo valor'
                 },
-                comentarios_ids: {
+                comentarios_ids: { // Relacion 1 a muchos | Inserción mediante updates , ya que un posts cuando se crea no posee comentarios | 
                     bsonType: 'array',
-                    minItems : 1 , 
                     items : {
                         bsonType  :'objectId'  
                     },

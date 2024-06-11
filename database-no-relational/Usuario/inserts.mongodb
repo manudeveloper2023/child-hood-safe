@@ -1,0 +1,174 @@
+use("chs")
+db.Usuario.insertMany(
+            [
+                {
+                    _id: ObjectId("6666f77c0737080b4cd69bfd"),
+                    alias: "juanito_perez",
+                    fecha_registro: new Date(),
+                    contraseña: "Password!123$",
+                    correo_electronico: ["juanito_perez@example.com"],
+                    denuncias_anonimas_ids: []
+                },
+                {
+                    _id: ObjectId("6666f77c0737080b4cd69bfe"),
+                    alias: "laura_garcia",
+                    fecha_registro: new Date(),
+                    contraseña: "Sec!#urePass12$",
+                    correo_electronico: ["laura_garcia@example.com"],
+                    telefono: ["145345689", "123456789"],
+                    denuncias_anonimas_ids: []
+                },
+                {
+                    _id: ObjectId("6666f77c0737080b4cd69bff"),
+                    alias: "carlos_rodriguez",
+                    fecha_registro: new Date(),
+                    contraseña: "Stron!g1234!$",
+                    correo_electronico: ["carlos_rodriguez@example.com"],
+                    denuncias_anonimas_ids: []
+                },
+                {
+                    _id: ObjectId("6666f77c0737080b4cd69c00"),
+                    alias: "ana_martinez",
+                    fecha_registro: new Date(),
+                    contraseña: "Saf!1ePassword123$!",
+                    correo_electronico: ["ana_martinez@example.com"],
+                    denuncias_anonimas_ids: []
+                },
+                {
+                    _id: ObjectId("6666f77c0737080b4cd69c01"),
+                    alias: "david_sanchez",
+                    fecha_registro: new Date(),
+                    contraseña: "Secr!#etPass$4!56",
+                    correo_electronico: ["david_sanchez@example.com"],
+                    telefono: ["112853689", "122346789"],
+                    denuncias_anonimas_ids: []
+                },
+                {
+                    _id: ObjectId("6666f77c0737080b4cd69c02"),
+                    alias: "sara_gomez",
+                    fecha_registro: new Date(),
+                    contraseña: "MyP!ass12!34$!",
+                    correo_electronico: ["sara_gomez@example.com"],
+                    denuncias_anonimas_ids: []
+                },
+                {
+                    _id: ObjectId("6666f77c0737080b4cd69c03"),
+                    alias: "sergio_fernandez",
+                    fecha_registro: new Date(),
+                    contraseña: "Supe!rPass$#56&7",
+                    correo_electronico: ["sergio_fernandez@example.com"],
+                    telefono: ["112345689", "123456789"],
+                    denuncias_anonimas_ids: []
+                },
+                {
+                    _id: ObjectId("6666f77c0737080b4cd69c04"),
+                    alias: "maria_lopez",
+                    fecha_registro: new Date(),
+                    contraseña: "TopSec!#ret12#3$",
+                    correo_electronico: ["maria_lopez@example.com"],
+                    denuncias_anonimas_ids: []
+                },
+                {
+                    _id: ObjectId("6666f77c0737080b4cd69c05"),
+                    alias: "javier_martin",
+                    fecha_registro: new Date(),
+                    contraseña: "MyS!ecret987!$",
+                    correo_electronico: ["javier_martin@example.com"],
+                    denuncias_anonimas_ids: []
+                },
+                {
+                    _id: ObjectId("6666f77c0737080b4cd69c06"),
+                    alias: "natalia_diaz",
+                    fecha_registro: new Date(),
+                    contraseña: "Ul!traP&ass789$",
+                    correo_electronico: ["natalia_diaz@example.com"],
+                    denuncias_anonimas_ids: []
+                },
+                {
+                    _id: ObjectId("6666f77c0737080b4cd69c07"),
+                    alias: "pedro_ramirez",
+                    fecha_registro: new Date(),
+                    contraseña: "Stro!ngPas#s$345",
+                    correo_electronico: ["pedro_ramirez@example.com"],
+                    denuncias_anonimas_ids: []
+                },
+                {
+                    _id: ObjectId("6666f77c0737080b4cd69c08"),
+                    alias: "lucia_morales",
+                    fecha_registro: new Date(),
+                    contraseña: "Ultr!a!Secret567$",
+                    correo_electronico: ["lucia_morales@example.com"],
+                    denuncias_anonimas_ids: []
+                },
+                {
+                    _id: ObjectId("6666f77c0737080b4cd69c09"),
+                    alias: "alberto_gonzalez",
+                    fecha_registro: new Date(),
+                    contraseña: "SuperSec$ret#765$",
+                    telefono: ["123345689", "123346789"],
+                    correo_electronico: ["alberto_gonzalez@example.com"],
+                    denuncias_anonimas_ids: []
+                },
+                {
+                    _id: ObjectId("6666f77c0737080b4cd69c0a"),
+                    alias: "paula_ruiz",
+                    fecha_registro: new Date(),
+                    contraseña: "Top!Pass123!$",
+                    correo_electronico: ["paula_ruiz@example.com"],
+                    denuncias_anonimas_ids: []
+                },
+                {
+                    _id: ObjectId("6666f77c0737080b4cd69c0b"),
+                    alias: "diego_hernandez",
+                    fecha_registro: new Date(),
+                    contraseña: "MySec!ur#e789$",
+                    correo_electronico: ["diego_hernandez@example.com"],
+                    telefono: ["186334689", "123236789"],
+                    denuncias_anonimas_ids: []
+                },
+                {
+                    _id: ObjectId("6666f77c0737080b4cd69c0c"),
+                    alias: "patricia_fernandez",
+                    fecha_registro: new Date(),
+                    contraseña: "Sa!fe$!Secret987$",
+                    telefono: ["112345689", "123456789"],
+                    correo_electronico: ["patricia_fernandez@example.com"],
+                    denuncias_anonimas_ids: []
+                },
+                {
+                    _id: ObjectId("6666f77c0737080b4cd69c0d"),
+                    alias: "alejandro_garcia",
+                    fecha_registro: new Date(),
+                    contraseña: "UltraS!ec#re123$",
+                    correo_electronico: ["alejandro_garcia@example.com"],
+                    denuncias_anonimas_ids: []
+                },
+                {
+                    _id: ObjectId("6666f77c0737080b4cd69c0e"),
+                    alias: "luis_perez",
+                    fecha_registro: new Date(),
+                    contraseña: "St!rong!Secret4!56$",
+                    correo_electronico: ["luis_perez@example.com"],
+                    telefono: ["112345689", "123456789"],
+                    denuncias_anonimas_ids: []
+                },
+                {
+                    _id: ObjectId("6666f77c0737080b4cd69c0f"),
+                    alias: "marta_martin",
+                    fecha_registro: new Date(),
+                    contraseña: "To#&!pSecre#t123$",
+                    correo_electronico: ["marta_martin@example.com"],
+                    telefono: ["122156789"],
+                    denuncias_anonimas_ids: []
+                },
+                {
+                    _id: ObjectId("6666f77c0737080b4cd69c10"),
+                    alias: "jose_ramirez",
+                    fecha_registro: new Date(),
+                    contraseña: "MyS!trong#789$",
+                    telefono: ["123456789"],
+                    correo_electronico: ["jose_ramirez@example.com"],
+                    denuncias_anonimas_ids: []
+                }
+    ]
+)

@@ -1,5 +1,5 @@
 use("chs");
-
+db.Etiquetas.drop()
 db.createCollection('Etiquetas', {
     validator: {
         $jsonSchema: {
@@ -11,12 +11,12 @@ db.createCollection('Etiquetas', {
                     bsonType: 'objectId',
                     description: 'Identificador único de la etiqueta'
                 },
-                etiquetas: {
+                etiquetas: {  // [ 0 - 100 ] caracteres 
                     bsonType: 'string',
                     maxLength: 100,
                     description: 'Nombre de la etiqueta'
                 },
-                posts_ids : { // Inserción mediante updates de nuevos posts 
+                posts_ids : { // Relacion 1 a muchos | Una etiqueta cuando se crea puede pertenecer a un Post 
                     bsonType : 'array', 
                     uniqueItems: true, 
                     minItems : 1 ,

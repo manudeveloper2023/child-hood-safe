@@ -1,4 +1,5 @@
 use("chs")
+db.Denuncia_Anonima.drop()
 db.createCollection("Denuncia_Anonima", {
     validator: {
         $jsonSchema: {
@@ -18,18 +19,18 @@ db.createCollection("Denuncia_Anonima", {
                     bsonType: 'date',
                     description: 'Fecha y hora en que se registró la denuncia'
                 },
-                ubigeo_id: { // Solo en perú
+                ubigeo_id: { // Relación 1 a muchos | Tener en cuenta que el UBIGEO es en el Perú | Obligatoriamente 6 caracteres
                     bsonType : 'string',
                     minLength : 6 , 
                     maxLength : 6 , 
-                    descripcion : 'Id de la ubicacion de la denuncia'
+                    description : 'Id de la ubicacion de la denuncia'
                 },
                 descripcion_menor: {
                     bsonType: 'object',
                     required: ['sexo', 'prendas', 'aproximacion_edad', 'tonalidad_piel'],
                     additionalProperties: false,
                     properties: {
-                    sexo: {
+                    sexo: { 
                         enum : ['F' , 'M'] , 
                         description: 'Sexo del menor' 
                     }, 
@@ -38,13 +39,13 @@ db.createCollection("Denuncia_Anonima", {
                         required: ['edad_menor', 'edad_mayor'],
                         additionalProperties: false,
                         properties: {
-                            edad_menor: {
+                            edad_menor: { // Rango [ 1 - 17 ] numeros enteros
                                 bsonType: 'int',
                                 minimum: 1,
                                 maximum: 17,
                                 description: 'Edad mínima aproximada del menor'
                             },
-                            edad_mayor: {
+                            edad_mayor: { // Rango [ 1 - 17 ] numeros enteros
                                 bsonType: 'int',
                                 minimum: 1,
                                 maximum: 17,
@@ -53,12 +54,12 @@ db.createCollection("Denuncia_Anonima", {
                         },
                         description: 'Aproximación de edad del menor'
                     }, 
-                    tonalidad_piel: {
+                    tonalidad_piel: { // Rango [ 0 - 20 ]
                         bsonType: 'string',
                         maxLength : 20 , 
                         description: 'Tonalidad de piel del menor'
                     },
-                    estado_fisico: {
+                    estado_fisico: { // Relacion 1 a pocos | El usuario puede registrar los estados fisicos del menor | Rango [1 , ] elementos
                         bsonType: 'array',
                         minItems: 1,
                         uniqueItems: true,
@@ -69,7 +70,7 @@ db.createCollection("Denuncia_Anonima", {
                         },
                         description: 'Lista de descripciones del estado físico del menor'
                     }, 
-                    trabajo_ilegal: {
+                    trabajo_ilegal: { // Relacion 1 a pocos | El usuario puede registrar el trabajo ilegal del menro | Rango [ 1 , ] elementos 
                         bsonType: 'array',
                         minItems: 1,
                         uniqueItems: true,
@@ -80,7 +81,7 @@ db.createCollection("Denuncia_Anonima", {
                         },
                         description: 'Lista de tipos de trabajo ilegal realizados por el menor'
                     },
-                    prendas: {
+                    prendas: { // Relacion 1 a 1 | El usuario puede registrar las prendas que lleva el menor | Rango [ 1 , ] subdocumentos
                         bsonType: 'object',
                         required: ['descripcion_ropa'],
                         additionalProperties: false,
@@ -89,11 +90,11 @@ db.createCollection("Denuncia_Anonima", {
                                 bsonType: 'string',
                                 description: 'Descripción de la ropa del menor'
                             },
-                            estado_ropa: {
+                            estado_ropa: { // Relacion 1 a pocos | La ropa puede tener muchos estados | Rango [ 1 , ] elementos 
                                 bsonType: 'array',
                                 minItems: 1,
                                 uniqueItems: true,
-                                items: {
+                                items: { // Rango [ 0 , 50 ] caracteres 
                                     bsonType: 'string',
                                     maxLength : 50 , 
                                     description: 'Estado de la ropa del menor'
@@ -103,10 +104,10 @@ db.createCollection("Denuncia_Anonima", {
                         description: 'Información sobre la vestimenta del menor'
                     }
                 },
-                dificultad: {
-                    enum: ['Moderado', 'Desafiante'],
-                    description: 'Nivel de dificultad o gravedad de la situación reportada en la denuncia'
-                }
+            },
+            dificultad: {
+                enum: ['Moderado', 'Desafiante'],
+                description: 'Nivel de dificultad o gravedad de la situación reportada en la denuncia'
             }
         }
     }

@@ -1,27 +1,34 @@
 use("chs")
+db.Ubigeo.drop()
 db.createCollection('Ubigeo', {
     validator: {
         $jsonSchema: {
             bsonType: 'object',
-            required: ['departamento', 'distrito' , 'provincia '],
+            required: ['_id','departamento', 'distrito' , 'provincia'],
             additionalProperties: false,  
             properties: {
-                departamento: {
+                _id: { // Relación 1 a muchos | Tener en cuenta que el UBIGEO es en el Perú | Obligatoriamente 6 caracteres
+                    bsonType : 'string',
+                    minLength : 6 , 
+                    maxLength : 6 , 
+                    description : 'Id de la ubicacion de la denuncia'
+                },
+                departamento: { // Rango [ 0 - 15 ] caracteres 
                     bsonType: 'string',
                     maxLength: 15,
-                    pattern: '^[a-zA-Z]+$',
+                    pattern: '[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]', // Solo acepta letras del alfabeto español 
                     description: 'Nombre del departamento'
                 },
-                distrito: {
+                distrito: { // Rango [ 0 - 30 ] caracteres 
                     bsonType: 'string',
                     maxLength: 30,
-                    pattern: '^[a-zA-Z]+$',
+                    pattern: '[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]',// Solo acepta letras del alfabeto español 
                     description: 'Nombre del distrito'
                 },
-                provincia: {
+                provincia: { // Rango [ 0 - 30 ] caracteres 
                     bsonType: 'string',
                     maxLength: 30,
-                    pattern: '^[a-zA-Z]+$',
+                    pattern: '[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]',// Solo acepta letras del alfabeto español 
                     description: 'Nombre de la provincia'
                 }
             }    

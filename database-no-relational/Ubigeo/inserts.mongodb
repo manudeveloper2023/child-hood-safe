@@ -1,0 +1,81 @@
+use("chs")
+db.Ubigeos.insertMany([
+    {
+      _id: "010101",
+      departamento: "Amazonas",
+      provincia: "Chachapoyas",
+      distrito: "Chachapoyas"
+    },
+    {
+      _id: "080101",
+      departamento: "Cusco",
+      provincia: "Cusco",
+      distrito: "Cusco"
+    },
+    {
+      _id: "160101",
+      departamento: "Loreto",
+      provincia: "Maynas",
+      distrito: "Iquitos"
+    },
+    {
+      _id: "140101",
+      departamento: "Lima",
+      provincia: "Lima",
+      distrito: "Lima"
+    },
+    {
+      _id: "120101",
+      departamento: "Junín",
+      provincia: "Huancayo",
+      distrito: "Huancayo"
+    },
+    {
+      _id: "250101",
+      departamento: "Ucayali",
+      provincia: "Coronel Portillo",
+      distrito: "Calleria"
+    },
+    {
+      _id: "130101",
+      departamento: "Lambayeque",
+      provincia: "Chiclayo",
+      distrito: "Chiclayo"
+    },
+    {
+      _id: "210101",
+      departamento: "San Martín",
+      provincia: "Moyobamba",
+      distrito: "Moyobamba"
+    },
+    {
+      _id: "240102",
+      departamento: "Tumbes",
+      provincia: "Tumbes",
+      distrito: "Corrales"
+    },
+    {
+      _id: "040101",
+      departamento: "Arequipa",
+      provincia: "Arequipa",
+      distrito: "Arequipa"
+    },
+    {
+      _id: "260101",
+      departamento: "Madre de Dios",
+      provincia: "Tambopata",
+      distrito: "Tambopata"
+    },
+    {
+      _id: "020101",
+      departamento: "Áncash",
+      provincia: "Huaraz",
+      distrito: "Huaraz"
+    },
+    {
+      _id: "220101",
+      departamento: "Tacna",
+      provincia: "Tacna",
+      distrito: "Tacna"
+    }
+  ]);

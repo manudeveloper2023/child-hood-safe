@@ -1,7 +1,7 @@
 use("chs")
 
 db.Comentario.updateOne(
-    { "_id": ObjectId("60c34fb0f0248b55348f6869") }, // Filtro para encontrar el comentario
+    { "_id": ObjectId("60c34fb0f0248b55348f6869") }, 
     { $push: { 
         "respuestas": { 
             $each: [
@@ -12,7 +12,7 @@ db.Comentario.updateOne(
     } }
 );
 db.Comentario.updateOne(
-    { "_id": ObjectId("60c34fb0f0248b55348f6865") }, // Filtro para encontrar el comentario
+    { "_id": ObjectId("60c34fb0f0248b55348f6865") }, 
     { $push: { 
         "respuestas": { 
             $each: [
@@ -24,7 +24,7 @@ db.Comentario.updateOne(
 );
 
 db.Comentario.updateOne(
-    { "_id": ObjectId("60c34fb0f0248b55348f6868") }, // Filtro para encontrar el comentario
+    { "_id": ObjectId("60c34fb0f0248b55348f6868") },
     { $push: { 
         "respuestas": { 
             $each: [
@@ -37,7 +37,7 @@ db.Comentario.updateOne(
 );
 
 db.Comentario.updateOne(
-    { "_id": ObjectId("60c34fb0f0248b55348f6866") }, // Filtro para encontrar el comentario
+    { "_id": ObjectId("60c34fb0f0248b55348f6866") },
     { $push: { 
         "respuestas": { 
             $each: [

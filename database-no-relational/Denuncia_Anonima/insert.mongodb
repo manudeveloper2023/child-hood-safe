@@ -1,0 +1,377 @@
+use("chs")
+
+db.Denuncia_Anonima.insertMany([
+    {
+        _id: ObjectId("60c34fb0f0248b55348f6861"),
+        descripcion: "Se denuncia un caso alarmante de explotación infantil en el departamento de Amazonas. El menor afectado, un niño de entre 6 y 8 años, de piel morena, sufre malnutrición y abuso. Es obligado a trabajar como mendigo en las calles. Lamentablemente, esta es una triste realidad que debe abordarse de manera urgente.",
+        fecha_registro_denuncia: ISODate("2024-06-10T00:00:00Z"),
+        ubigeo_id: "010101",
+        descripcion_menor: {
+            sexo: "M",
+            aproximacion_edad: {
+                edad_menor: 6,
+                edad_mayor: 8
+            },
+            tonalidad_piel: "Morena",
+            estado_fisico: ["Malnutrición", "Abuso"],
+            trabajo_ilegal: ["Mendicidad"],
+            prendas: {
+                descripcion_ropa: "Pantalón corto y camiseta",
+                estado_ropa: ["Desgastadas"]
+            }
+        },
+        dificultad: "Desafiante"
+    },
+    {
+        _id: ObjectId("60c34fb0f0248b55348f6862"),
+        descripcion: "Se presenta una denuncia relacionada con trabajo infantil en la ciudad de Arequipa. En este caso, se trata de una niña de entre 9 y 12 años, de piel trigueña, que sufre maltrato y explotación. Es forzada a trabajar en condiciones inhumanas, realizando labores agrícolas. Es crucial intervenir para proteger los derechos de esta menor.",
+        fecha_registro_denuncia: ISODate("2024-06-10T00:00:00Z"),
+        ubigeo_id: "040101",
+        descripcion_menor: {
+            sexo: "F",
+            aproximacion_edad: {
+                edad_menor: 9,
+                edad_mayor: 12
+            },
+            tonalidad_piel: "Trigueña",
+            estado_fisico: ["Maltrato", "Explotación"],
+            trabajo_ilegal: ["Trabajo agrícola"],
+            prendas: {
+                descripcion_ropa: "Vestido desgarrado",
+                estado_ropa: ["Sucio"]
+            }
+        },
+        dificultad: "Desafiante"
+    },
+    {
+        _id: ObjectId("60c34fb0f0248b55348f6863"),
+        descripcion: "Esta denuncia resalta un caso preocupante de maltrato infantil en la ciudad de Cusco. El menor afectado, un niño de entre 7 y 9 años, de piel blanca, sufre de abandono y maltrato. Se encuentra en una situación de desamparo y es explotado en la venta de periódicos. La comunidad debe actuar de manera solidaria para proteger a este menor.",
+        fecha_registro_denuncia: ISODate("2024-06-10T00:00:00Z"),
+        ubigeo_id: "080101",
+        descripcion_menor: {
+            sexo: "M",
+            aproximacion_edad: {
+                edad_menor: 7,
+                edad_mayor: 9
+            },
+            tonalidad_piel: "Blanca",
+            estado_fisico: ["Abandono", "Maltrato"],
+            trabajo_ilegal: ["Venta de periódicos"],
+            prendas: {
+                descripcion_ropa: "Camiseta y pantalón corto",
+                estado_ropa: ["Sucio"]
+            }
+        },
+        dificultad: "Moderado"
+    },
+    {
+        _id: ObjectId("60c34fb0f0248b55348f6864"),
+        descripcion: "Se reporta un caso alarmante de explotación infantil en Lambayeque. La víctima, una niña de entre 10 y 12 años, de piel trigueña, sufre de malnutrición y abandono. Es obligada a trabajar en actividades de mendicidad en condiciones deplorables. Esta situación requiere atención inmediata por parte de las autoridades.",
+        fecha_registro_denuncia: ISODate("2024-06-10T00:00:00Z"),
+        ubigeo_id: "140101",
+        descripcion_menor: {
+            sexo: "F",
+            aproximacion_edad: {
+                edad_menor: 10,
+                edad_mayor: 12
+            },
+            tonalidad_piel: "Trigueña",
+            estado_fisico: ["Malnutrición", "Abandono"],
+            trabajo_ilegal: ["Mendicidad"],
+            prendas: {
+                descripcion_ropa: "Falda y polo",
+                estado_ropa: ["Desgarradas"]
+            }
+        },
+        dificultad: "Desafiante"
+    },
+    {
+        _id: ObjectId("60c34fb0f0248b55348f6865"),
+        descripcion: "Se presenta una denuncia relacionada con trabajo infantil en la región de Junín. En este caso, se trata de un niño de entre 8 y 10 años, de piel trigueña, que sufre de abuso y explotación. Es forzado a trabajar en la venta ambulante de periódicos, exponiéndose a peligros constantes. Es crucial intervenir para proteger los derechos de este menor.",
+        fecha_registro_denuncia: ISODate("2024-06-10T00:00:00Z"),
+        ubigeo_id: "120101",
+        descripcion_menor: {
+            sexo: "M",
+            aproximacion_edad: {
+                edad_menor: 8,
+                edad_mayor: 10
+            },
+            tonalidad_piel: "Trigueña",
+            estado_fisico: ["Abuso", "Explotación"],
+            trabajo_ilegal: ["Venta ambulante de periódicos"],
+            prendas: {
+                descripcion_ropa: "Camisa y pantalón",
+                estado_ropa: ["Desgastados"]
+            }
+        },
+        dificultad: "Desafiante"
+    },
+    {
+        _id: ObjectId("60c34fb0f0248b553434f866"),
+        descripcion: "Esta denuncia resalta un caso preocupante de maltrato infantil en la ciudad de Tacna. La víctima, una niña de entre 6 y 9 años, de piel morena, sufre de malnutrición y desamparo. Es sometida a abusos físicos y psicológicos por parte de sus tutores. Es urgente brindarle protección y apoyo a esta menor.",
+        fecha_registro_denuncia: ISODate("2024-06-10T00:00:00Z"),
+        ubigeo_id: "250101",
+        descripcion_menor: {
+            sexo: "F",
+            aproximacion_edad: {
+                edad_menor: 6,
+                edad_mayor: 9
+            },
+            tonalidad_piel: "Morena",
+            estado_fisico: ["Malnutrición", "Desamparo"],
+            prendas: {
+                descripcion_ropa: "Vestido",
+                estado_ropa: ["Sucio"]
+            }
+        },
+        dificultad: "Moderado"
+    },
+    {
+        _id: ObjectId("60c34fb0f0248b55348f1117"),
+        descripcion: "Se reporta un caso alarmante de explotación infantil en Huancavelica. La víctima, un niño de entre 7 y 10 años, de piel trigueña, sufre de abandono y explotación laboral. Es forzado a trabajar en condiciones precarias en un taller textil clandestino. Esta situación requiere una respuesta inmediata de las autoridades competentes.",
+        fecha_registro_denuncia: ISODate("2024-06-10T00:00:00Z"),
+        ubigeo_id: "130101",
+        descripcion_menor: {
+            sexo: "M",
+            aproximacion_edad: {
+                edad_menor: 7,
+                edad_mayor: 10
+            },
+            tonalidad_piel: "Trigueña",
+            estado_fisico: ["Abandono", "Explotación"],
+            trabajo_ilegal: ["Trabajo en taller textil"],
+            prendas: {
+                descripcion_ropa: "Overol y camiseta",
+                estado_ropa: ["Desgarrados"]
+            }
+        },
+        dificultad: "Desafiante"
+    },
+    {
+        _id: ObjectId("60c34fb0f0248b55348f6868"),
+        descripcion: "Se presenta una denuncia relacionada con trabajo infantil en la región de Puno. En este caso, se trata de una niña de entre 9 y 12 años, de piel blanca, que sufre de abuso y explotación. Es obligada a trabajar en la mendicidad, exponiéndose a situaciones peligrosas en las calles. Es necesario intervenir de manera urgente para proteger a esta menor.",
+        fecha_registro_denuncia: ISODate("2024-06-10T00:00:00Z"),
+        ubigeo_id: "210101",
+        descripcion_menor: {
+            sexo: "F",
+            aproximacion_edad: {
+                edad_menor: 9,
+                edad_mayor: 12
+            },
+            tonalidad_piel: "Blanca",
+            estado_fisico: ["Abuso", "Explotación"],
+            trabajo_ilegal: ["Mendicidad"],
+            prendas: {
+                descripcion_ropa: "Chaleco y falda",
+                estado_ropa: ["Desgarrados"]
+            }
+        },
+        dificultad: "Desafiante"
+    }, 
+    {
+        _id: ObjectId("60c34fb0f0248b55328f1869"),
+        descripcion: "Esta denuncia resalta un caso preocupante de maltrato infantil en la región de Madre de Dios. La víctima, un niño de entre 6 y 8 años, de piel morena, sufre de abandono y malnutrición. Es sometido a abusos físicos y psicológicos por parte de su entorno familiar. Es urgente brindarle protección y apoyo a este menor.",
+        fecha_registro_denuncia: ISODate("2024-06-10T00:00:00Z"),
+        ubigeo_id: "240102",
+        descripcion_menor: {
+            sexo: "M",
+            aproximacion_edad: {
+                edad_menor: 6,
+                edad_mayor: 8
+            },
+            tonalidad_piel: "Morena",
+            estado_fisico: ["Abandono", "Malnutrición"],
+            prendas: {
+                descripcion_ropa: "Pantalón corto y polo",
+                estado_ropa: ["Desgastados"]
+            }
+        },
+        dificultad: "Moderado"
+    },
+    {
+        _id: ObjectId("60c34fb0f0248b55348f6866"),
+        descripcion: "Esta denuncia resalta un caso preocupante de maltrato infantil en la ciudad de Tacna. La víctima, una niña de entre 6 y 9 años, de piel morena, sufre de malnutrición y desamparo. Es sometida a abusos físicos y psicológicos por parte de sus tutores. Es urgente brindarle protección y apoyo a esta menor.",
+        fecha_registro_denuncia: ISODate("2024-06-10T00:00:00Z"),
+        ubigeo_id: "250101",
+        descripcion_menor: {
+            sexo: "F",
+            aproximacion_edad: {
+                edad_menor: 6,
+                edad_mayor: 9
+            },
+            tonalidad_piel: "Morena",
+            estado_fisico: ["Malnutrición", "Desamparo"] ,
+            prendas: {
+                descripcion_ropa: "Vestido",
+                estado_ropa: ["Sucio"]
+            }
+        },
+        dificultad: "Moderado"
+    },
+    {
+        _id: ObjectId("60c34fb0f0248b55348f6867"),
+        descripcion: "Se reporta un caso alarmante de explotación infantil en Huancavelica. La víctima, un niño de entre 7 y 10 años, de piel trigueña, sufre de abandono y explotación laboral. Es forzado a trabajar en condiciones precarias en un taller textil clandestino. Esta situación requiere una respuesta inmediata de las autoridades competentes.",
+        fecha_registro_denuncia: ISODate("2024-06-10T00:00:00Z"),
+        ubigeo_id: "130101",
+        descripcion_menor: {
+            sexo: "M",
+            aproximacion_edad: {
+                edad_menor: 7,
+                edad_mayor: 10
+            },
+            tonalidad_piel: "Trigueña",
+            estado_fisico: ["Abandono", "Explotación"],
+            trabajo_ilegal: ["Trabajo en taller textil"],
+            prendas: {
+                descripcion_ropa: "Overol y camiseta",
+                estado_ropa: ["Desgarrados"]
+            }
+        },
+        dificultad: "Desafiante"
+    },
+    {
+        _id: ObjectId("60c34fb0f0248b55348f1568"),
+        descripcion: "Se presenta una denuncia relacionada con trabajo infantil en la región de Puno. En este caso, se trata de una niña de entre 9 y 12 años, de piel blanca, que sufre de abuso y explotación. Es obligada a trabajar en la mendicidad, exponiéndose a situaciones peligrosas en las calles. Es necesario intervenir de manera urgente para proteger a esta menor.",
+        fecha_registro_denuncia: ISODate("2024-06-10T00:00:00Z"),
+        ubigeo_id: "210101",
+        descripcion_menor: {
+            sexo: "F",
+            aproximacion_edad: {
+                edad_menor: 9,
+                edad_mayor: 12
+            },
+            tonalidad_piel: "Blanca",
+            estado_fisico: ["Abuso", "Explotación"],
+            trabajo_ilegal: ["Mendicidad"],
+            prendas: {
+                descripcion_ropa: "Chaleco y falda",
+                estado_ropa: ["Desgarrados"]
+            }
+        },
+        dificultad: "Desafiante"
+    },
+    {
+        _id: ObjectId("60c34fb0f0248b55348f6869"),
+        descripcion: "Esta denuncia resalta un caso preocupante de maltrato infantil en la región de Madre de Dios. La víctima, un niño de entre 6 y 8 años, de piel morena, sufre de abandono y malnutrición. Es sometido a abusos físicos y psicológicos por parte de su entorno familiar. Es urgente brindarle protección y apoyo a este menor.",
+        fecha_registro_denuncia: ISODate("2024-06-10T00:00:00Z"),
+        ubigeo_id: "240102",
+        descripcion_menor: {
+            sexo: "M",
+            aproximacion_edad: {
+                edad_menor: 6,
+                edad_mayor: 8
+            },
+            tonalidad_piel: "Morena",
+            estado_fisico: ["Abandono", "Malnutrición"],
+            prendas: {
+                descripcion_ropa: "Pantalón corto y polo",
+                estado_ropa: ["Desgastados"]
+            }
+        },
+        dificultad: "Moderado"
+    },
+    {
+        _id: ObjectId("60c34fb0f0248b55348f6870"),
+        descripcion: "Se denuncia un caso alarmante de explotación infantil en la región de Ucayali. La víctima, una niña de entre 10 y 12 años, de piel morena, sufre de abuso y explotación laboral. Es obligada a trabajar en la industria maderera en condiciones peligrosas y sin medidas de seguridad adecuadas. Es urgente tomar medidas para proteger los derechos de esta menor.",
+        fecha_registro_denuncia: ISODate("2024-06-10T00:00:00Z"),
+        ubigeo_id: "260101",
+        descripcion_menor: {
+            sexo: "F",
+            aproximacion_edad: {
+                edad_menor: 10,
+                edad_mayor: 12
+            },
+            tonalidad_piel: "Morena",
+            estado_fisico: ["Abuso", "Explotación"],
+            trabajo_ilegal: ["Industria maderera"],
+            prendas: {
+                descripcion_ropa: "Mono y camiseta",
+                estado_ropa: ["Desgarrados"]
+            }
+        },
+        dificultad: "Desafiante"
+    },
+    {
+        _id: ObjectId("60c34fb0f0248b55348f6871"),
+        descripcion: "Se presenta una denuncia relacionada con trabajo infantil en la región de San Martín. En este caso, se trata de un niño de entre 8 y 10 años, de piel trigueña, que sufre de abuso y explotación. Es forzado a trabajar en la agricultura, realizando labores pesadas bajo condiciones deplorables. Es fundamental intervenir para proteger a este menor.",
+        fecha_registro_denuncia: ISODate("2024-06-10T00:00:00Z"),
+        ubigeo_id: "220101",
+        descripcion_menor: {
+            sexo: "M",
+            aproximacion_edad: {
+                edad_menor: 8,
+                edad_mayor: 10
+            },
+            tonalidad_piel: "Trigueña",
+            estado_fisico: ["Abuso", "Explotación"],
+            trabajo_ilegal: ["Agricultura"],
+            prendas: {
+                descripcion_ropa: "Pantalón y polo",
+                estado_ropa: ["Sucio"]
+            }
+        },
+        dificultad: "Desafiante"
+    },
+    {
+        _id: ObjectId("60c34fb0f0248b55348f6872"),
+        descripcion: "Esta denuncia resalta un caso preocupante de maltrato infantil en el departamento de Ayacucho. La víctima, un niño de entre 7 y 9 años, de piel blanca, sufre de abandono y maltrato físico. Es sometido a golpes y negligencia por parte de sus tutores. Es urgente brindarle protección y apoyo a este menor.",
+        fecha_registro_denuncia: ISODate("2024-06-10T00:00:00Z"),
+        ubigeo_id: "040101",
+        descripcion_menor: {
+            sexo: "M",
+            aproximacion_edad: {
+                edad_menor: 7,
+                edad_mayor: 9
+            },
+            tonalidad_piel: "Blanca",
+            estado_fisico: ["Abandono", "Maltrato físico"],
+            prendas: {
+                descripcion_ropa: "Camiseta y short",
+                estado_ropa: ["Desgarrados"]
+            }
+        },
+        dificultad: "Moderado"
+    },
+    {
+        _id: ObjectId("60c34fb0f0248b55348f6873"),
+        descripcion: "Se reporta un caso alarmante de explotación infantil en la región de Loreto. La víctima, un niño de entre 8 y 11 años, de piel trigueña, sufre de malnutrición y abuso. Es obligado a trabajar en la pesca artesanal, exponiéndose a peligros constantes en el río. Es fundamental intervenir para proteger a este menor y garantizar su bienestar.",
+        fecha_registro_denuncia: ISODate("2024-06-10T00:00:00Z"),
+        ubigeo_id: "160101",
+        descripcion_menor: {
+            sexo: "M",
+            aproximacion_edad: {
+                edad_menor: 8,
+                edad_mayor: 11
+            },
+            tonalidad_piel: "Trigueña",
+            estado_fisico: ["Malnutrición", "Abuso"],
+            trabajo_ilegal: ["Pesca artesanal"],
+            prendas: {
+                descripcion_ropa: "Short y camiseta",
+                estado_ropa: ["Desgastados"]
+            }
+        },
+        dificultad: "Desafiante"
+    },
+    {
+        _id: ObjectId("60c34fb0f0248b55348f6874"),
+        descripcion: "Se presenta una denuncia relacionada con trabajo infantil en la región de Ancash. En este caso, se trata de una niña de entre 10 y 12 años, de piel morena, que sufre de abuso y explotación. Es obligada a trabajar en la venta ambulante de productos en las calles, enfrentando situaciones de riesgo. Es esencial intervenir para proteger a esta menor y garantizar su seguridad.",
+        fecha_registro_denuncia: ISODate("2024-06-10T00:00:00Z"),
+        ubigeo_id: "020101",
+        descripcion_menor: {
+            sexo: "F",
+            aproximacion_edad: {
+                edad_menor: 10,
+                edad_mayor: 12
+            },
+            tonalidad_piel: "Morena",
+            estado_fisico: ["Abuso", "Explotación"],
+            trabajo_ilegal: ["Venta ambulante de productos"],
+            prendas: {
+                descripcion_ropa: "Vestido y chaleco",
+                estado_ropa: ["Desgastados"]
+            }
+        },
+        dificultad: "Desafiante"
+    }
+])

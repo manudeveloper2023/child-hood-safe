@@ -1,0 +1,2 @@
+use("chs")
+db.Etiquetas.find()

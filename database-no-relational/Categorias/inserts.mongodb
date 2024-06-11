@@ -1,0 +1,166 @@
+use("chs")
+db.Categorias.insertMany([
+    // Agricultura
+    {
+      categoria: "Agricultura",
+      posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee01"),
+        ObjectId("648e699dcf6d747f2e76ee0d"),
+        ObjectId("648e699dcf6d747f2e76ee12"),
+        ObjectId("648e699dcf6d747f2e76ee14")
+      ]
+    },
+    // Educación
+    {
+      categoria: "Educación",
+      posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee01"),
+        ObjectId("648e699dcf6d747f2e76ee08"),
+        ObjectId("648e699dcf6d747f2e76ee09")
+      ]
+    },
+    // Derechos Humanos
+    {
+      categoria: "Derechos Humanos",
+      posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee01"),
+        ObjectId("648e699dcf6d747f2e76ee02"),
+        ObjectId("648e699dcf6d747f2e76ee03"),
+        ObjectId("648e699dcf6d747f2e76ee04"),
+        ObjectId("648e699dcf6d747f2e76ee05"),
+        ObjectId("648e699dcf6d747f2e76ee06"),
+        ObjectId("648e699dcf6d747f2e76ee07"),
+        ObjectId("648e699dcf6d747f2e76ee08"),
+        ObjectId("648e699dcf6d747f2e76ee09"),
+        ObjectId("648e699dcf6d747f2e76ee0a"),
+        ObjectId("648e699dcf6d747f2e76ee0b"),
+        ObjectId("648e699dcf6d747f2e76ee0c"),
+        ObjectId("648e699dcf6d747f2e76ee0d"),
+        ObjectId("648e699dcf6d747f2e76ee0e"),
+        ObjectId("648e699dcf6d747f2e76ee0f"),
+        ObjectId("648e699dcf6d747f2e76ee10"),
+        ObjectId("648e699dcf6d747f2e76ee11"),
+        ObjectId("648e699dcf6d747f2e76ee12"),
+        ObjectId("648e699dcf6d747f2e76ee13"),
+        ObjectId("648e699dcf6d747f2e76ee14")
+      ]
+    },
+    // Industria Textil
+    {
+      categoria: "Industria Textil",
+      posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee02"),
+        ObjectId("648e699dcf6d747f2e76ee0e")
+      ]
+    },
+    // Derechos Laborales
+    {
+      categoria: "Derechos Laborales",
+      posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee02"),
+        ObjectId("648e699dcf6d747f2e76ee0e")
+      ]
+    },
+    // Salud
+    {
+      categoria: "Salud",
+      posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee03"),
+        ObjectId("648e699dcf6d747f2e76ee11"),
+        ObjectId("648e699dcf6d747f2e76ee12")
+      ]
+    },
+    // Psicología
+    {
+      categoria: "Psicología",
+      posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee03")
+      ]
+    },
+    // Comercio
+    {
+      categoria: "Comercio",
+      posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee05")
+      ]
+    },
+    // Economía Informal
+    {
+      categoria: "Economía Informal",
+      posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee05")
+      ]
+    },
+    // Trabajo Doméstico
+    {
+      categoria: "Trabajo Doméstico",
+      posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee06")
+      ]
+    },
+    // Historias de Vida
+    {
+      categoria: "Historias de Vida",
+      posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee06"),
+        ObjectId("648e699dcf6d747f2e76ee0a")
+      ]
+    },
+    // Economía
+    {
+      categoria: "Economía",
+      posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee07")
+      ]
+    },
+    // Desarrollo Social
+    {
+      categoria: "Desarrollo Social",
+      posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee07")
+      ]
+    },
+    // Políticas Sociales
+    {
+      categoria: "Políticas Sociales",
+      posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee08")
+      ]
+    },
+    // Prevención
+    {
+      categoria: "Prevención",
+      posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee09")
+      ]
+    },
+    // Sociedad
+    {
+      categoria: "Sociedad",
+      posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee0a")
+      ]
+    },
+    // Legislación
+    {
+      categoria: "Legislación",
+      posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee0b")
+      ]
+    },
+    // Políticas Públicas
+    {
+      categoria: "Políticas Públicas",
+      posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee0b")
+      ]
+    },
+    // Industria Pesquera
+    {
+      categoria: "Industria Pesquera",
+      posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee0c")
+      ]
+    }
+  ]);
+  

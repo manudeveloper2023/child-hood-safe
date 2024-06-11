@@ -1,0 +1,91 @@
+use("chs")
+
+db.Posts.updateOne(
+    {
+        _id: ObjectId("648e699dcf6d747f2e76ee01")
+    },
+    {
+        $push:
+        {
+            comentarios_ids:
+            {
+                $each: [
+                    ObjectId("60c34fb0f0248b55348f6861"),
+                    ObjectId("60c34fb0f0248b55348f6862"),
+                    ObjectId("60c34fb0f0248b55348f6863"),
+                    ObjectId("60c34fb0f0248b55348f6864"),
+                    ObjectId("60c34fb0f0248b55348f6865")
+                ]
+            }
+        }
+    }
+);
+
+db.Posts.updateOne(
+    {
+        _id: ObjectId("648e699dcf6d747f2e76ee02")
+    },
+    {
+        $push:
+        {
+            comentarios_ids:
+            {
+                $each: [
+                    ObjectId("60c34fb0f0248b55348f6866"),
+                    ObjectId("60c34fb0f0248b55348f6867"),
+                    ObjectId("60c34fb0f0248b55348f6868"),
+                    ObjectId("60c34fb0f0248b55348f6869"),
+                    ObjectId("60c34fb0f0248b55348f686a"),
+                    ObjectId("60c34fb0f0248b55348f686b")
+                ]
+            }
+        }
+    }
+);
+db.Posts.updateOne(
+    {
+        _id: ObjectId("648e699dcf6d747f2e76ee03")
+    },
+    {
+        $push:
+        {
+            comentarios_ids:
+            {
+                $each: [
+                    ObjectId("60c34fb0f0248b55348f6874"),
+                    ObjectId("60c34fb0f0248b55348f6875"),
+                    ObjectId("60c34fb0f0248b55348f6876"),
+                    ObjectId("60c34fb0f0248b55348f6877"),
+                    ObjectId("60c34fb0f0248b55348f6878"),
+                    ObjectId("60c34fb0f0248b55348f6879")
+                ]
+            }
+        }
+    }
+);
+
+
+
+
+
+
+
+db.Posts.updateOne(
+    {
+        _id: ObjectId("648e699dcf6d747f2e76ee04")
+    },
+    {
+        $push:
+        {
+            comentarios_ids:
+            {
+                $each: [
+                    ObjectId("60c34fb0f0248b55348f6873"),
+                    ObjectId("60c34fb0f0248b55348f6874")
+                ]
+            }
+        }
+    }
+);
+
+

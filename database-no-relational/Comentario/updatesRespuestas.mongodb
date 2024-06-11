@@ -1,0 +1,50 @@
+use("chs")
+
+db.Comentario.updateOne(
+    { "_id": ObjectId("60c34fb0f0248b55348f6869") }, // Filtro para encontrar el comentario
+    { $push: { 
+        "respuestas": { 
+            $each: [
+                ObjectId("60c34fb0f0248b55348f6878"),
+                ObjectId("60c34fb0f0248b55348f6879")
+            ]
+        } 
+    } }
+);
+db.Comentario.updateOne(
+    { "_id": ObjectId("60c34fb0f0248b55348f6865") }, // Filtro para encontrar el comentario
+    { $push: { 
+        "respuestas": { 
+            $each: [
+                ObjectId("60c34fb0f0248b55348f687a"),
+                ObjectId("60c34fb0f0248b55348f687b")
+            ]
+        } 
+    } }
+);
+
+db.Comentario.updateOne(
+    { "_id": ObjectId("60c34fb0f0248b55348f6868") }, // Filtro para encontrar el comentario
+    { $push: { 
+        "respuestas": { 
+            $each: [
+                ObjectId("60c34fb0f0248b55348f687c"),
+                ObjectId("60c34fb0f0248b55348f687d"),
+                ObjectId("60c34fb0f0248b55348f687e")
+            ]
+        } 
+    } }
+);
+
+db.Comentario.updateOne(
+    { "_id": ObjectId("60c34fb0f0248b55348f6866") }, // Filtro para encontrar el comentario
+    { $push: { 
+        "respuestas": { 
+            $each: [
+                ObjectId("60c34fb0f0248b55348f687f"),
+                ObjectId("60c34fb0f0248b55348f6880"),
+                ObjectId("60c34fb0f0248b55348f687e")
+            ]
+        } 
+    } }
+);

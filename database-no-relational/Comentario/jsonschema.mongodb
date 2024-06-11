@@ -1,21 +1,22 @@
 use("chs")
+db.Comentario.drop()
 db.createCollection('Comentario', {
     validator: {
         $jsonSchema: {
             bsonType: 'object',
-            required: ['_id','comentario' ,'creador_comentario', 'fecha_publicado'],
+            required: ['_id','comentario' ,'creador_comentario', 'fecha_publicado' , 'respuestas'],
             additionalProperties: false,
             properties: {
                 _id: {
                     bsonType: 'objectId',
                     description: 'Identificador único del comentario'
-                },
-                creador_comentario: {
+                }, 
+                creador_comentario: { // Desnormalizado | Relacion 1 a muchos | Un usuario puede crear muchos comentarios 
                     bsonType: 'object',
                     required: ['alias', 'usuario_id'],
                     additionalProperties: false,
                     properties: {
-                        alias: {
+                        alias: { // Rango [ 8 - 30 ]
                             bsonType: 'string',
                             minLength: 8,
                             maxLength: 30,
@@ -31,21 +32,21 @@ db.createCollection('Comentario', {
                     bsonType : 'string' , 
                     description : 'Comentario con caracteres ilimitados'
                 },
-                respuestas: {
+                respuestas: { // Relacion 1 a muchos | Un usuario puede responder un comentario
                     bsonType: 'array',
                     uniqueItems: true,
-                    minItems: 1,
                     items: {
                         bsonType: 'objectId', 
                         description : 'Ids de los comentarios que realizaron una respuesta al comentario'
-                        }
-                    },
-                    description: 'Respuestas al comentario'
+                        }, 
+                        description: 'Respuestas al comentario'
                 },
-                fecha_publicado: {
-                    bsonType: 'date',
-                    description: 'Fecha en que se publicó el comentario'
+                fecha_publicado : {
+                    bsonType : 'date'
                 }
+                }
+                
+                
             }
         }
     });

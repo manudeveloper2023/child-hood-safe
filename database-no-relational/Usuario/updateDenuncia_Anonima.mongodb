@@ -1,0 +1,89 @@
+use("chs")
+db.Usuario.updateOne(
+    { "_id": ObjectId("6666f77c0737080b4cd69bfd") }, 
+    { $push: { 
+        "denuncias_anonimas_ids": { 
+            $each: [
+                ObjectId("60c34fb0f0248b55348f6861"),
+                ObjectId("60c34fb0f0248b55348f6862"),
+                ObjectId("60c34fb0f0248b55348f6863")
+            ]
+        } 
+    } 
+    }
+);
+db.Usuario.updateOne(
+    { "_id": ObjectId("6666f77c0737080b4cd69bfe") }, 
+    { $push: { 
+        "denuncias_anonimas_ids": { 
+            $each: [
+                ObjectId("60c34fb0f0248b55348f6864"),
+                ObjectId("60c34fb0f0248b55348f6865"),
+                ObjectId("60c34fb0f0248b553434f866")
+            ]
+        } 
+    } 
+    }
+);
+db.Usuario.updateOne(
+    { "_id": ObjectId("6666f77c0737080b4cd69bff") }, 
+    { $push: { 
+        "denuncias_anonimas_ids": { 
+            $each: [
+                ObjectId("60c34fb0f0248b55348f1117"),
+                ObjectId("60c34fb0f0248b55348f6868")
+            ]
+        } 
+    } 
+    }
+);
+db.Usuario.updateOne(
+    { "_id": ObjectId("6666f77c0737080b4cd69c00") }, 
+    { $push: { 
+        "denuncias_anonimas_ids": { 
+            $each: [
+                ObjectId("60c34fb0f0248b55328f1869"),
+                ObjectId("60c34fb0f0248b55348f6866"),
+                ObjectId("60c34fb0f0248b55348f6867")
+            ]
+        } 
+    } 
+    }
+);
+db.Usuario.updateOne(
+    { "_id": ObjectId("6666f77c0737080b4cd69c01") }, 
+    { $push: { 
+        "denuncias_anonimas_ids": { 
+            $each: [
+                ObjectId("60c34fb0f0248b55348f1568"),
+                ObjectId("60c34fb0f0248b55348f6869"),
+                ObjectId("60c34fb0f0248b55348f6870")
+            ]
+        } 
+    } 
+    }
+);
+db.Usuario.updateOne(
+    { "_id": ObjectId("6666f77c0737080b4cd69c02") }, 
+    { $push: { 
+        "denuncias_anonimas_ids": { 
+            $each: [
+                ObjectId("60c34fb0f0248b55348f6871"), 
+                ObjectId("60c34fb0f0248b55348f6872")
+            ]
+        } 
+    } 
+    }
+);
+db.Usuario.updateOne(
+    { "_id": ObjectId("6666f77c0737080b4cd69c03") }, 
+    { $push: { 
+        "denuncias_anonimas_ids": { 
+            $each: [
+                ObjectId("60c34fb0f0248b55348f6873"), 
+                ObjectId("60c34fb0f0248b55348f6874")
+            ]
+        } 
+    } 
+    }
+);

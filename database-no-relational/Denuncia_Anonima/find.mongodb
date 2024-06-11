@@ -1,0 +1,11 @@
+use("chs")
+
+db.Denuncia_Anonima.aggregate(
+    [
+        {
+            $project : {
+                fecha_registro_denuncia : 0 , descripcion_menor : 0 ,descripcion : 0  , dificultad : 0 , _id : 0 
+            }
+        }
+    ]
+)

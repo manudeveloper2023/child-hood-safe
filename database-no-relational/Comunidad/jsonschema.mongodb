@@ -1,17 +1,19 @@
 use("chs")
+db.Comunidad.drop() 
 db.createCollection('Comunidad', {
     validator: {
         $jsonSchema: {
             bsonType: 'object',
-            required: ['_id', 'nombre_comunidad', 'descripcion', 'fecha_creacion', 'creador_comunidad'],
+            required: ['_id', 'nombre_comunidad', 'descripcion', 'fecha_creacion', 'creador_comunidad' , 'usuarios_ids' , 'posts_ids'],
             additionalProperties: false,
             properties: {
                 _id: {
                     bsonType: 'objectId',
                     description: 'Identificador único de la comunidad'
                 },
-                nombre_comunidad: {
+                nombre_comunidad: { // Rango [ 0 , 100 ] caracteres 
                     bsonType: 'string',
+                    maxLength : 100 , 
                     description: 'Nombre de la comunidad, con un máximo de 100 caracteres.'
                 },
                 descripcion: {
@@ -22,13 +24,13 @@ db.createCollection('Comunidad', {
                     bsonType: 'date',
                     description: 'Fecha de creación de la comunidad.'
                 },
-                creador_comunidad: {
+                creador_comunidad: { // Relación 1 a pocos | Un usuario puede crear una comunidad 
                     bsonType: 'object',
                     required: ['alias', 'user_id'],
                     additionalProperties: false,
                     description: 'Información sobre el creador de la comunidad.',
                     properties: {
-                        alias: {
+                        alias: { // Rango [ 8 - 30 ] caracteres 
                             bsonType: 'string',
                             minLength: 8,
                             maxLength: 30,
@@ -40,9 +42,17 @@ db.createCollection('Comunidad', {
                         }
                     }
                 },
-                posts_ids: { // Inserción mediante updates 
-                    bsonType: 'array',
-                    minItems: 1,
+                usuarios_ids : { //Relación muchos a muchos |Inserción mediante updates , ya que al crearse una comunidad el primer usuario es el creador 
+                    bsonType : 'array' , 
+                    minItems : 1 , 
+                    additionalProperties : false , 
+                    items : {
+                        bsonType : 'objectId' 
+                    }, 
+                    description : 'Lista de Ids de los usuarios que pertenecen a la comunidad'
+                }, 
+                posts_ids: { // Relación 1 a muchos | Inserción mediante updates  , ya que una comunidad no va a empezar a realizar posts desde un principio
+                    bsonType: 'array', 
                     uniqueItems: true,
                     items: {
                         bsonType: 'objectId'

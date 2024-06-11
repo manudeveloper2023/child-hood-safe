@@ -1,0 +1,334 @@
+use("chs")
+db.Comentario.insertMany([
+    {
+        _id: ObjectId("60c34fb0f0248b55348f686a"),
+        creador_comentario: {
+            alias: "natalia_diaz",
+            usuario_id: ObjectId("6666f77c0737080b4cd69c06")
+        },
+        comentario: "Es doloroso ver estas situaciones.",
+        fecha_publicado: ISODate("2024-06-10T10:15:00Z"),
+        respuestas: []
+    },
+    {
+        _id: ObjectId("60c34fb0f0248b55348f686b"),
+        creador_comentario: {
+            alias: "pedro_ramirez",
+            usuario_id: ObjectId("6666f77c0737080b4cd69c07")
+        },
+        comentario: "Ojalá se tomen acciones concretas pronto.",
+        fecha_publicado: ISODate("2024-06-10T10:30:00Z"),
+        respuestas: []
+    },
+    {
+        _id: ObjectId("60c34fb0f0248b55348f686c"),
+        creador_comentario: {
+            alias: "lucia_morales",
+            usuario_id: ObjectId("6666f77c0737080b4cd69c08")
+        },
+        comentario: "Deberíamos difundir esto para generar conciencia.",
+        fecha_publicado: ISODate("2024-06-10T10:45:00Z"),
+        respuestas: []
+    },
+    {
+        _id: ObjectId("60c34fb0f0248b55348f686d"),
+        creador_comentario: {
+            alias: "alberto_gonzalez",
+            usuario_id: ObjectId("6666f77c0737080b4cd69c09")
+        },
+        comentario: "Esto no puede seguir así.",
+        fecha_publicado: ISODate("2024-06-10T11:00:00Z"),
+        respuestas: []
+    },
+    {
+        _id: ObjectId("60c34fb0f0248b55348f686e"),
+        creador_comentario: {
+            alias: "paula_ruiz",
+            usuario_id: ObjectId("6666f77c0737080b4cd69c0a")
+        },
+        comentario: "Es necesario un cambio radical.",
+        fecha_publicado: ISODate("2024-06-10T11:15:00Z"),
+        respuestas: []
+    },
+    {
+        _id: ObjectId("60c34fb0f0248b55348f686f"),
+        creador_comentario: {
+            alias: "diego_hernandez",
+            usuario_id: ObjectId("6666f77c0737080b4cd69c0b")
+        },
+        comentario: "La infancia debería ser protegida, no explotada.",
+        fecha_publicado: ISODate("2024-06-10T11:30:00Z"),
+        respuestas: []
+    },
+    {
+        _id: ObjectId("60c34fb0f0248b55348f6870"),
+        creador_comentario: {
+            alias: "patricia_fernandez",
+            usuario_id: ObjectId("6666f77c0737080b4cd69c0c")
+        },
+        comentario: "Esto nos incumbe a todos como sociedad.",
+        fecha_publicado: ISODate("2024-06-10T11:45:00Z"),
+        respuestas: []
+    },
+    {
+        _id: ObjectId("60c34fb0f0248b55348f6871"),
+        creador_comentario: {
+            alias: "alejandro_garcia",
+            usuario_id: ObjectId("6666f77c0737080b4cd69c0d")
+        },
+        comentario: "Es urgente actuar.",
+        fecha_publicado: ISODate("2024-06-10T12:00:00Z"),
+        respuestas: []
+    },
+    {
+        _id: ObjectId("60c34fb0f0248b55348f6872"),
+        creador_comentario: {
+            alias: "luis_perez",
+            usuario_id: ObjectId("6666f77c0737080b4cd69c0e")
+        },
+        comentario: "¿Qué medidas se están tomando al respecto?",
+        fecha_publicado: ISODate("2024-06-10T12:15:00Z"),
+        respuestas: []
+    },
+    {
+        _id: ObjectId("60c34fb0f0248b55348f6873"),
+        creador_comentario: {
+            alias: "marta_martin",
+            usuario_id: ObjectId("6666f77c0737080b4cd69c0f")
+        },
+        comentario: "Es hora de levantar la voz.",
+        fecha_publicado: ISODate("2024-06-10T12:30:00Z"),
+        respuestas: []
+    },
+    {
+        _id: ObjectId("60c34fb0f0248b55348f6874"),
+        creador_comentario: {
+            alias: "jose_ramirez",
+            usuario_id: ObjectId("6666f77c0737080b4cd69c10")
+        },
+        comentario: "¿Qué podemos hacer para ayudar?",
+        fecha_publicado: ISODate("2024-06-10T12:45:00Z"),
+        respuestas: []
+    },
+    {
+        _id: ObjectId("60c34fb0f0248b55348f6875"),
+        creador_comentario: {
+            alias: "ana_gomez",
+            usuario_id: ObjectId("6666f77c0737080b4cd69c11")
+        },
+        comentario: "Espero que esta situación cambie pronto.",
+        fecha_publicado: ISODate("2024-06-10T13:00:00Z"),
+        respuestas: []
+    },
+    {
+        _id: ObjectId("60c34fb0f0248b55348f6876"),
+        creador_comentario: {
+            alias: "jorge_martinez",
+            usuario_id: ObjectId("6666f77c0737080b4cd69c12")
+        },
+        comentario: "La niñez merece un futuro mejor.",
+        fecha_publicado: ISODate("2024-06-10T13:15:00Z"),
+        respuestas: []
+    },
+    {
+        _id: ObjectId("60c34fb0f0248b55348f6877"),
+        creador_comentario: {
+            alias: "lucia_gonzalez",
+            usuario_id: ObjectId("6666f77c0737080b4cd69c13")
+        },
+        comentario: "Estas historias son desgarradoras.",
+        fecha_publicado: ISODate("2024-06-10T13:30:00Z"),
+        respuestas: []
+    },
+    {
+    _id: ObjectId("60c34fb0f0248b55348f6861"),
+    creador_comentario: {
+        alias: "juanito_perez",
+        usuario_id: ObjectId("6666f77c0737080b4cd69bfd")
+    },
+    comentario: "¡Qué terrible situación!",
+    fecha_publicado: ISODate("2024-06-10T08:00:00Z"),
+    respuestas: []
+},
+{
+    _id: ObjectId("60c34fb0f0248b55348f6862"),
+    creador_comentario: {
+        alias: "laura_garcia",
+        usuario_id: ObjectId("6666f77c0737080b4cd69bfe")
+    },
+    comentario: "Es indignante, ¿no crees?",
+    fecha_publicado: ISODate("2024-06-10T08:15:00Z"),
+    respuestas: []
+},
+{
+    _id: ObjectId("60c34fb0f0248b55348f6863"),
+    creador_comentario: {
+        alias: "carlos_rodriguez",
+        usuario_id: ObjectId("6666f77c0737080b4cd69bff")
+    },
+    comentario: "Esto es muy triste.",
+    fecha_publicado: ISODate("2024-06-10T08:30:00Z"),
+    respuestas: []
+},
+{
+    _id: ObjectId("60c34fb0f0248b55348f6864"),
+    creador_comentario: {
+        alias: "ana_martinez",
+        usuario_id: ObjectId("6666f77c0737080b4cd69c00")
+    },
+    comentario: "Deberíamos hacer algo al respecto.",
+    fecha_publicado: ISODate("2024-06-10T08:45:00Z"),
+    respuestas: []
+},
+{
+    _id: ObjectId("60c34fb0f0248b55348f6865"),
+    creador_comentario: {
+        alias: "david_sanchez",
+        usuario_id: ObjectId("6666f77c0737080b4cd69c01")
+    },
+    comentario: "¿Cómo podemos ayudar?",
+    fecha_publicado: ISODate("2024-06-10T09:00:00Z"),
+    respuestas: []
+},
+{
+    _id: ObjectId("60c34fb0f0248b55348f6866"),
+    creador_comentario: {
+        alias: "sara_gomez",
+        usuario_id: ObjectId("6666f77c0737080b4cd69c02")
+    },
+    comentario: "Esto es alarmante.",
+    fecha_publicado: ISODate("2024-06-10T09:15:00Z"),
+    respuestas: []
+},
+{
+    _id: ObjectId("60c34fb0f0248b55348f6867"),
+    creador_comentario: {
+        alias: "sergio_fernandez",
+        usuario_id: ObjectId("6666f77c0737080b4cd69c03")
+    },
+    comentario: "Deberían tomarse medidas inmediatas.",
+    fecha_publicado: ISODate("2024-06-10T09:30:00Z"),
+    respuestas: []
+},
+{
+    _id: ObjectId("60c34fb0f0248b55348f6868"),
+    creador_comentario: {
+        alias: "maria_lopez",
+        usuario_id: ObjectId("6666f77c0737080b4cd69c04")
+    },
+    comentario: "Espero que haya una pronta solución.",
+    fecha_publicado: ISODate("2024-06-10T09:45:00Z"),
+    respuestas: []
+},
+{
+    _id: ObjectId("60c34fb0f0248b55348f6869"),
+    creador_comentario: {
+        alias: "javier_martin",
+        usuario_id: ObjectId("6666f77c0737080b4cd69c05")
+    },
+    comentario: "Esto es inaceptable.",
+    fecha_publicado: ISODate("2024-06-10T10:00:00Z"),
+    respuestas: []
+},
+{
+    _id: ObjectId("60c34fb0f0248b55348f6878"),
+    creador_comentario: {
+        alias: "juanito_perez",
+        usuario_id: ObjectId("6666f77c0737080b4cd69bfd")
+    },
+    comentario: "¡Qué terrible situación!",
+    fecha_publicado: ISODate("2024-06-10T14:00:00Z"),
+    respuestas: []
+},
+{
+    _id: ObjectId("60c34fb0f0248b55348f6879"),
+    creador_comentario: {
+        alias: "laura_garcia",
+        usuario_id: ObjectId("6666f77c0737080b4cd69bfe")
+    },
+    comentario: "Es indignante, ¿no crees?",
+    fecha_publicado: ISODate("2024-06-10T14:15:00Z"),
+    respuestas: []
+},
+{
+    _id: ObjectId("60c34fb0f0248b55348f687a"),
+    creador_comentario: {
+        alias: "carlos_rodriguez",
+        usuario_id: ObjectId("6666f77c0737080b4cd69bff")
+    },
+    comentario: "Esto es muy triste.",
+    fecha_publicado: ISODate("2024-06-10T14:30:00Z"),
+    respuestas: []
+},
+{
+    _id: ObjectId("60c34fb0f0248b55348f687b"),
+    creador_comentario: {
+        alias: "ana_martinez",
+        usuario_id: ObjectId("6666f77c0737080b4cd69c00")
+    },
+    comentario: "Deberíamos hacer algo al respecto.",
+    fecha_publicado: ISODate("2024-06-10T14:45:00Z"),
+    respuestas: []
+},
+{
+    _id: ObjectId("60c34fb0f0248b55348f687c"),
+    creador_comentario: {
+        alias: "david_sanchez",
+        usuario_id: ObjectId("6666f77c0737080b4cd69c01")
+    },
+    comentario: "¿Cómo podemos ayudar?",
+    fecha_publicado: ISODate("2024-06-10T15:00:00Z"),
+    respuestas: []
+},
+{
+    _id: ObjectId("60c34fb0f0248b55348f687d"),
+    creador_comentario: {
+        alias: "sara_gomez",
+        usuario_id: ObjectId("6666f77c0737080b4cd69c02")
+    },
+    comentario: "Esto es alarmante.",
+    fecha_publicado: ISODate("2024-06-10T15:15:00Z"),
+    respuestas: []
+},
+{
+    _id: ObjectId("60c34fb0f0248b55348f687e"),
+    creador_comentario: {
+        alias: "sergio_fernandez",
+        usuario_id: ObjectId("6666f77c0737080b4cd69c03")
+    },
+    comentario: "Deberían tomarse medidas inmediatas.",
+    fecha_publicado: ISODate("2024-06-10T15:30:00Z"),
+    respuestas: []
+},
+{
+    _id: ObjectId("60c34fb0f0248b55348f687f"),
+    creador_comentario: {
+        alias: "maria_lopez",
+        usuario_id: ObjectId("6666f77c0737080b4cd69c04")
+    },
+    comentario: "Espero que haya una pronta solución.",
+    fecha_publicado: ISODate("2024-06-10T15:45:00Z"),
+    respuestas: []
+},
+{
+    _id: ObjectId("60c34fb0f0248b55348f6880"),
+    creador_comentario: {
+        alias: "javier_martin",
+        usuario_id: ObjectId("6666f77c0737080b4cd69c05")
+    },
+    comentario: "Esto es inaceptable.",
+    fecha_publicado: ISODate("2024-06-10T16:00:00Z"),
+    respuestas: []
+},
+{
+    _id: ObjectId("60c34fb0f0248b55348f6881"),
+    creador_comentario: {
+        alias: "natalia_diaz",
+        usuario_id: ObjectId("6666f77c0737080b4cd69c06")
+    },
+    comentario: "Es doloroso ver estas situaciones.",
+    fecha_publicado: ISODate("2024-06-10T16:15:00Z"),
+    respuestas: []
+}
+
+])

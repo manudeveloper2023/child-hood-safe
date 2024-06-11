@@ -1,4 +1,5 @@
 use("chs")
+db.Categorias.drop()
 db.createCollection('Categorias', {
     validator: {
         $jsonSchema: {
@@ -10,7 +11,7 @@ db.createCollection('Categorias', {
                     bsonType: 'objectId',
                     description: 'Identificador único de la categoría'
                 },
-                categoria: {
+                categoria: { // Rango [ 0 - 100 ] caracteres
                     bsonType: 'string',
                     maxLength: 100,
                     description: 'Nombre de la categoría'

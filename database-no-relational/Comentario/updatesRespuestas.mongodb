@@ -12,7 +12,7 @@ db.Comentario.updateOne(
     } }
 );
 db.Comentario.updateOne(
-    { "_id": ObjectId("60c34fb0f0248b55348f6865") }, // Filtro para encontrar el comentario
+    { "_id": ObjectId("60c34fb0f0248b55348f6864") }, // Filtro para encontrar el comentario
     { $push: { 
         "respuestas": { 
             $each: [

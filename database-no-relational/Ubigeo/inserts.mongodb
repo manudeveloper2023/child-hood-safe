@@ -1,81 +1,167 @@
 use("chs")
-db.Ubigeos.insertMany([
+db.Ubigeo.insertMany(
+  [
     {
       _id: "010101",
       departamento: "Amazonas",
-      provincia: "Chachapoyas",
-      distrito: "Chachapoyas"
-    },
+      distrito: "Chachapoyas",
+      provincia: "Chachapoyas"
+    }, 
     {
       _id: "080101",
       departamento: "Cusco",
-      provincia: "Cusco",
-      distrito: "Cusco"
-    },
-    {
-      _id: "160101",
-      departamento: "Loreto",
-      provincia: "Maynas",
-      distrito: "Iquitos"
+      distrito: "Cusco",
+      provincia: "Cusco"
     },
     {
       _id: "140101",
-      departamento: "Lima",
-      provincia: "Lima",
-      distrito: "Lima"
+      departamento: "Lambayeque",
+      distrito: "Chiclayo",
+      provincia: "Chiclayo"
     },
     {
       _id: "120101",
-      departamento: "Junín",
-      provincia: "Huancayo",
-      distrito: "Huancayo"
+      departamento: "Junin",
+      distrito: "Huancayo",
+      provincia: "Huancayo"
     },
     {
       _id: "250101",
       departamento: "Ucayali",
-      provincia: "Coronel Portillo",
-      distrito: "Calleria"
+      distrito: "Pucallpa",
+      provincia: "Coronel Portillo"
     },
     {
       _id: "130101",
-      departamento: "Lambayeque",
-      provincia: "Chiclayo",
-      distrito: "Chiclayo"
+      departamento: "La Libertad",
+      distrito: "Trujillo",
+      provincia: "Trujillo"
     },
     {
       _id: "210101",
-      departamento: "San Martín",
-      provincia: "Moyobamba",
-      distrito: "Moyobamba"
+      departamento: "Puno",
+      distrito: "Puno",
+      provincia: "Puno"
     },
     {
       _id: "240102",
-      departamento: "Tumbes",
-      provincia: "Tumbes",
-      distrito: "Corrales"
+      departamento: "Madre de Dios",
+      distrito: "Tambopata",
+      provincia: "Tambopata"
+    },
+    {
+      _id: "260101",
+      departamento: "Loreto",
+      distrito: "Iquitos",
+      provincia: "Maynas"
+    },
+    {
+      _id: "220101",
+      departamento: "San Martin",
+      distrito: "Moyobamba",
+      provincia: "Moyobamba"
     },
     {
       _id: "040101",
       departamento: "Arequipa",
-      provincia: "Arequipa",
-      distrito: "Arequipa"
+      distrito: "Arequipa",
+      provincia: "Arequipa"
     },
     {
-      _id: "260101",
-      departamento: "Madre de Dios",
-      provincia: "Tambopata",
-      distrito: "Tambopata"
+      _id: "160101",
+      departamento: "Huancavelica",
+      distrito: "Huancavelica",
+      provincia: "Huancavelica"
     },
     {
       _id: "020101",
-      departamento: "Áncash",
-      provincia: "Huaraz",
-      distrito: "Huaraz"
+      departamento: "Ancash",
+      distrito: "Huaraz",
+      provincia: "Huaraz"
     },
     {
-      _id: "220101",
+      _id: "150101",
+      departamento: "Lima",
+      distrito: "Lima",
+      provincia: "Lima"
+    },
+    {
+      _id: "060101",
+      departamento: "Cajamarca",
+      distrito: "Cajamarca",
+      provincia: "Cajamarca"
+    },
+    {
+      _id: "070101",
+      departamento: "Callao",
+      distrito: "Callao",
+      provincia: "Callao"
+    },
+    {
+      _id: "110101",
+      departamento: "Huanuco",
+      distrito: "Huanuco",
+      provincia: "Huanuco"
+    },
+    {
+      _id: "190101",
+      departamento: "Pasco",
+      distrito: "Cerro de Pasco",
+      provincia: "Pasco"
+    },
+    {
+      _id: "030101",
+      departamento: "Apurimac",
+      distrito: "Abancay",
+      provincia: "Abancay"
+    },
+    {
+      _id: "050101",
+      departamento: "Ayacucho",
+      distrito: "Ayacucho",
+      provincia: "Huamanga"
+    },
+    {
+      _id: "090101",
+      departamento: "Huancavelica",
+      distrito: "Huancavelica",
+      provincia: "Huancavelica"
+    },
+    {
+      _id: "170101",
+      departamento: "Loreto",
+      distrito: "Iquitos",
+      provincia: "Maynas"
+    },
+    {
+      _id: "180101",
+      departamento: "Moquegua",
+      distrito: "Moquegua",
+      provincia: "Mariscal Nieto"
+    },
+    {
+      _id: "200101",
+      departamento: "Piura",
+      distrito: "Piura",
+      provincia: "Piura"
+    },
+    {
+      _id: "230101",
       departamento: "Tacna",
-      provincia: "Tacna",
-      distrito: "Tacna"
+      distrito: "Tacna",
+      provincia: "Tacna"
+    },
+    {
+      _id: "120201",
+      departamento: "Junin",
+      distrito: "Chupaca",
+      provincia: "Chupaca"
+    },
+    {
+      _id: "150102",
+      departamento: "Lima",
+      distrito: "Miraflores",
+      provincia: "Lima"
     }
-  ]);
+  ]
+);

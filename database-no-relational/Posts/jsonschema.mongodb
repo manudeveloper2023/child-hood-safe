@@ -68,6 +68,7 @@ db.createCollection('Posts', {
                 },
                 comentarios_ids: { // Relacion 1 a muchos | Inserción mediante updates , ya que un posts cuando se crea no posee comentarios | 
                     bsonType: 'array',
+                    uniqueItems : true , 
                     items : {
                         bsonType  :'objectId'  
                     },

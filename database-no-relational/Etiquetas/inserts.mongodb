@@ -1,10 +1,11 @@
 use("chs")
 
 db.Etiquetas.insertMany([
+    //En los Posts ID se agregan los que estan afiliados a las ETIQUETAS
     {
-      "_id": ObjectId(),
-      "etiquetas": "trabajo infantil",
-      "posts_ids": [
+      _id: ObjectId(),
+      etiquetas: "trabajo infantil",
+      posts_ids: [
         ObjectId("648e699dcf6d747f2e76ee01"),
         ObjectId("648e699dcf6d747f2e76ee02"),
         ObjectId("648e699dcf6d747f2e76ee03"),
@@ -28,89 +29,89 @@ db.Etiquetas.insertMany([
       ]
     },
     {
-      "_id": ObjectId(),
-      "etiquetas": "educación",
-      "posts_ids": [
+      _id: ObjectId(),
+      etiquetas: "educación",
+      posts_ids: [
         ObjectId("648e699dcf6d747f2e76ee01")
       ]
     },
     {
-      "_id": ObjectId(),
-      "etiquetas": "condiciones laborales",
-      "posts_ids": [
+      _id: ObjectId(),
+      etiquetas: "condiciones laborales",
+      posts_ids: [
         ObjectId("648e699dcf6d747f2e76ee02"),
         ObjectId("648e699dcf6d747f2e76ee03"),
         ObjectId("648e699dcf6d747f2e76ee0c")
       ]
     },
     {
-      "_id": ObjectId(),
-      "etiquetas": "salud infantil",
-      "posts_ids": [
+      _id: ObjectId(),
+      etiquetas: "salud infantil",
+      posts_ids: [
         ObjectId("648e699dcf6d747f2e76ee03")
       ]
     },
     {
-      "_id": ObjectId(),
-      "etiquetas": "minería",
-      "posts_ids": [
+      _id: ObjectId(),
+      etiquetas: "minería",
+      posts_ids: [
         ObjectId("648e699dcf6d747f2e76ee04"),
         ObjectId("648e699dcf6d747f2e76ee13")
       ]
     },
     {
-      "_id": ObjectId(),
-      "etiquetas": "mercados",
-      "posts_ids": [
+      _id: ObjectId(),
+      etiquetas: "mercados",
+      posts_ids: [
         ObjectId("648e699dcf6d747f2e76ee05")
       ]
     },
     {
-      "_id": ObjectId(),
-      "etiquetas": "empleados domésticos",
-      "posts_ids": [
+      _id: ObjectId(),
+      etiquetas: "empleados domésticos",
+      posts_ids: [
         ObjectId("648e699dcf6d747f2e76ee06")
       ]
     },
     {
-      "_id": ObjectId(),
-      "etiquetas": "impacto económico",
-      "posts_ids": [
+      _id: ObjectId(),
+      etiquetas: "impacto económico",
+      posts_ids: [
         ObjectId("648e699dcf6d747f2e76ee07")
       ]
     },
     {
-      "_id": ObjectId(),
-      "etiquetas": "erradicación",
-      "posts_ids": [
+      _id: ObjectId(),
+      etiquetas: "erradicación",
+      posts_ids: [
         ObjectId("648e699dcf6d747f2e76ee08")
       ]
     },
     {
-      "_id": ObjectId(),
-      "etiquetas": "prevención",
-      "posts_ids": [
+      _id: ObjectId(),
+      etiquetas: "prevención",
+      posts_ids: [
         ObjectId("648e699dcf6d747f2e76ee09")
       ]
     },
     {
-      "_id": ObjectId(),
-      "etiquetas": "experiencias",
-      "posts_ids": [
+      _id: ObjectId(),
+      etiquetas: "experiencias",
+      posts_ids: [
         ObjectId("648e699dcf6d747f2e76ee0a")
       ]
     },
     {
-      "_id": ObjectId(),
-      "etiquetas": "leyes",
-      "posts_ids": [
+      _id: ObjectId(),
+      etiquetas: "leyes",
+      posts_ids: [
         ObjectId("648e699dcf6d747f2e76ee0b")
       ]
     },
     {
-      "_id": ObjectId(),
-      "etiquetas": "cacao",
-      "posts_ids": [
+      _id: ObjectId(),
+      etiquetas: "cacao",
+      posts_ids: [
         ObjectId("648e699dcf6d747f2e76ee0d")
       ]
     },

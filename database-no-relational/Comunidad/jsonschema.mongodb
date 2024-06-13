@@ -45,7 +45,7 @@ db.createCollection('Comunidad', {
                 usuarios_ids : { //Relación muchos a muchos |Inserción mediante updates , ya que al crearse una comunidad el primer usuario es el creador 
                     bsonType : 'array' , 
                     minItems : 1 , 
-                    additionalProperties : false , 
+                    uniqueItems: true,
                     items : {
                         bsonType : 'objectId' 
                     }, 

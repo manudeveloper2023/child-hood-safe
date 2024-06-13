@@ -32,7 +32,7 @@ db.createCollection('Comentario', {
                     bsonType : 'string' , 
                     description : 'Comentario con caracteres ilimitados'
                 },
-                respuestas: { // Relacion 1 a muchos | Un usuario puede responder un comentario
+                respuestas: { // Relacion 1 a muchos | Inserción mediante updates , ya que al crear un comentario no tendra respuestas
                     bsonType: 'array',
                     uniqueItems: true,
                     items: {

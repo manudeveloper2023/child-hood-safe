@@ -1,6 +1,8 @@
 use("chs")
 db.Categorias.insertMany([
+  //En los Posts ID se agregan los que estan afiliados a las CATEGORIAS
     // Agricultura
+    
     {
       categoria: "Agricultura",
       posts_ids: [

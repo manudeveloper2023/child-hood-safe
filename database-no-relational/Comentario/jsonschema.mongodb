@@ -16,7 +16,7 @@ db.createCollection('Comentario', {
                     required: ['alias', 'usuario_id'],
                     additionalProperties: false,
                     properties: {
-                        alias: { // Rango [ 8 - 30 ]
+                        alias: { // Rango [ 8 - 30 ] caracteres
                             bsonType: 'string',
                             minLength: 8,
                             maxLength: 30,
@@ -49,4 +49,4 @@ db.createCollection('Comentario', {
                 
             }
         }
-    });
+});

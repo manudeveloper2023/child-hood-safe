@@ -24,9 +24,9 @@ db.createCollection('Comunidad', {
                     bsonType: 'date',
                     description: 'Fecha de creación de la comunidad.'
                 },
-                creador_comunidad: { // Relación 1 a pocos | Un usuario puede crear una comunidad 
+                creador_comunidad: { // Desnormalizado | Relación 1 a muchos | Un usuario puede crear muchas comunidades
                     bsonType: 'object',
-                    required: ['alias', 'user_id'],
+                    required: ['alias', 'usuario_id'],
                     additionalProperties: false,
                     description: 'Información sobre el creador de la comunidad.',
                     properties: {
@@ -36,7 +36,7 @@ db.createCollection('Comunidad', {
                             maxLength: 30,
                             description: 'Alias del creador, entre 8 y 30 caracteres.'
                         },
-                        user_id: {
+                        usuario_id: {
                             bsonType: 'objectId',
                             description: 'ID del usuario creador.'
                         }

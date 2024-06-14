@@ -16,13 +16,14 @@ db.createCollection('Categorias', {
                     maxLength: 100,
                     description: 'Nombre de la categoría'
                 },
-                posts_ids : { // Inserción mediante updates de nuevos posts 
+                posts_ids : { //Relacion muchos a muchos |Una categoria cuando se crea puede pertenecer a un post, inserción mediante updates de nuevos posts 
                     bsonType : 'array', 
                     uniqueItems: true, 
-                    minItems : 1 ,  
                     items : {
-                        bsonType  :'objectId'
-                    }
+                        bsonType  :'objectId', 
+                        description: 'ID del post asociado a esta categoria'
+                    },
+                    description: 'Lista de los Ids de los Posts asociados a la categoria'
                 }
             }
         }

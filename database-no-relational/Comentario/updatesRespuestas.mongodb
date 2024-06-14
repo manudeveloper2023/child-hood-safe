@@ -12,7 +12,7 @@ db.Comentario.updateOne(
     } }
 );
 db.Comentario.updateOne(
-    { "_id": ObjectId("60c34fb0f0248b55348f6864") }, // Filtro para encontrar el comentario
+    { "_id": ObjectId("60c34fb0f0248b55348f6864") }, 
     { $push: { 
         "respuestas": { 
             $each: [
@@ -24,7 +24,11 @@ db.Comentario.updateOne(
 );
 
 db.Comentario.updateOne(
+<<<<<<< HEAD
+    { "_id": ObjectId("60c34fb0f0248b55348f6868") }, 
+=======
     { "_id": ObjectId("60c34fb0f0248b55348f6868") },
+>>>>>>> origin/Main
     { $push: { 
         "respuestas": { 
             $each: [
@@ -37,7 +41,11 @@ db.Comentario.updateOne(
 );
 
 db.Comentario.updateOne(
+<<<<<<< HEAD
+    { "_id": ObjectId("60c34fb0f0248b55348f6866") }, 
+=======
     { "_id": ObjectId("60c34fb0f0248b55348f6866") },
+>>>>>>> origin/Main
     { $push: { 
         "respuestas": { 
             $each: [

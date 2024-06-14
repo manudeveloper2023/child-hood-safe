@@ -29,7 +29,7 @@ db.createCollection('Usuario', {
                     pattern : "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&])([A-Za-z\\d$@$!%*?&]|[^ ]){12,30}$", 
                     description: 'Contraseña del usuario. Debe contener entre 12 y 30 caracteres, al menos una letra mayúscula, una letra minúscula, un número y un carácter especial.'
                 },
-                telefono: { // Relacion 1 a pocos | El usuario al crear la cuenta puede ingresar su numero telefonico | Rango [1,] elementos
+                telefono: { // Relacion 1 a pocos | El usuario al crear la cuenta puede ingresar su numero telefonico | Rango [1 - * ] elementos
                     bsonType: 'array',
                     minItems: 1,
                     uniqueItems: true,
@@ -42,7 +42,7 @@ db.createCollection('Usuario', {
                     },
                     description: 'Lista de números de teléfono del usuario.'
                 },
-                correo_electronico: { // Relacion 1 a pocos | El usuario al crear la cuenta debe ingresar su correo electronico | Rango [ 1, ] elementos 
+                correo_electronico: { // Relacion 1 a pocos | El usuario al crear la cuenta debe ingresar su correo electronico | Rango [ 1 - *  ] elementos 
                     bsonType: 'array',
                     minItems: 1,
                     uniqueItems: true,

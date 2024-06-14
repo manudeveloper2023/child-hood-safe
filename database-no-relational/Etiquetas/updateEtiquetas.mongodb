@@ -1,0 +1,135 @@
+use("chs")
+
+db.Etiquetas.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3a01") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee01"),
+        ObjectId("648e699dcf6d747f2e76ee02"),
+        ObjectId("648e699dcf6d747f2e76ee03"),
+        ObjectId("648e699dcf6d747f2e76ee04"),
+        ObjectId("648e699dcf6d747f2e76ee05"),
+        ObjectId("648e699dcf6d747f2e76ee06"),
+        ObjectId("648e699dcf6d747f2e76ee07"),
+        ObjectId("648e699dcf6d747f2e76ee08"),
+        ObjectId("648e699dcf6d747f2e76ee09"),
+        ObjectId("648e699dcf6d747f2e76ee0a"),
+        ObjectId("648e699dcf6d747f2e76ee0b"),
+        ObjectId("648e699dcf6d747f2e76ee0c"),
+        ObjectId("648e699dcf6d747f2e76ee0d"),
+        ObjectId("648e699dcf6d747f2e76ee0e"),
+        ObjectId("648e699dcf6d747f2e76ee0f"),
+        ObjectId("648e699dcf6d747f2e76ee10"),
+        ObjectId("648e699dcf6d747f2e76ee11"),
+        ObjectId("648e699dcf6d747f2e76ee12"),
+        ObjectId("648e699dcf6d747f2e76ee13"),
+        ObjectId("648e699dcf6d747f2e76ee14")
+    ]}}
+);
+
+db.Etiquetas.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3a02") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee01")
+    ]}}
+);
+
+db.Etiquetas.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3a03") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee02"),
+        ObjectId("648e699dcf6d747f2e76ee03"),
+        ObjectId("648e699dcf6d747f2e76ee0c")
+    ]}}
+);
+
+db.Etiquetas.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3a04") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee03")
+    ]}}
+);
+
+db.Etiquetas.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3a05") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee04"),
+        ObjectId("648e699dcf6d747f2e76ee13")
+    ]}}
+);
+
+db.Etiquetas.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3a06") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee05")
+    ]}}
+);
+
+db.Etiquetas.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3a07") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee06")
+    ]}}
+);
+
+db.Etiquetas.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3a08") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee07")
+    ]}}
+);
+
+db.Etiquetas.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3a09") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee08")
+    ]}}
+);
+
+db.Etiquetas.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3a0a") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee09")
+    ]}}
+);
+
+db.Etiquetas.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3a0b") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee0a")
+    ]}}
+);
+
+db.Etiquetas.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3a0c") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee0b")
+    ]}}
+);
+
+db.Etiquetas.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3a0d") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee0d")
+    ]}}
+);
+
+db.Etiquetas.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3a0e") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee0e")
+    ]}}
+);
+
+db.Etiquetas.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3a0f") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee0f")
+    ]}}
+);
+
+db.Etiquetas.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3a10") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee10")
+    ]}}
+);

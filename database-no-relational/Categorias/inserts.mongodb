@@ -1,168 +1,98 @@
 use("chs")
 db.Categorias.insertMany([
-  //En los Posts ID se agregan los que estan afiliados a las CATEGORIAS
-    // Agricultura
-    
-    {
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3b01"),
       categoria: "Agricultura",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee01"),
-        ObjectId("648e699dcf6d747f2e76ee0d"),
-        ObjectId("648e699dcf6d747f2e76ee12"),
-        ObjectId("648e699dcf6d747f2e76ee14")
-      ]
-    },
-    // Educación
-    {
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3b02"),
       categoria: "Educación",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee01"),
-        ObjectId("648e699dcf6d747f2e76ee08"),
-        ObjectId("648e699dcf6d747f2e76ee09")
-      ]
-    },
-    // Derechos Humanos
-    {
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3b03"),
       categoria: "Derechos Humanos",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee01"),
-        ObjectId("648e699dcf6d747f2e76ee02"),
-        ObjectId("648e699dcf6d747f2e76ee03"),
-        ObjectId("648e699dcf6d747f2e76ee04"),
-        ObjectId("648e699dcf6d747f2e76ee05"),
-        ObjectId("648e699dcf6d747f2e76ee06"),
-        ObjectId("648e699dcf6d747f2e76ee07"),
-        ObjectId("648e699dcf6d747f2e76ee08"),
-        ObjectId("648e699dcf6d747f2e76ee09"),
-        ObjectId("648e699dcf6d747f2e76ee0a"),
-        ObjectId("648e699dcf6d747f2e76ee0b"),
-        ObjectId("648e699dcf6d747f2e76ee0c"),
-        ObjectId("648e699dcf6d747f2e76ee0d"),
-        ObjectId("648e699dcf6d747f2e76ee0e"),
-        ObjectId("648e699dcf6d747f2e76ee0f"),
-        ObjectId("648e699dcf6d747f2e76ee10"),
-        ObjectId("648e699dcf6d747f2e76ee11"),
-        ObjectId("648e699dcf6d747f2e76ee12"),
-        ObjectId("648e699dcf6d747f2e76ee13"),
-        ObjectId("648e699dcf6d747f2e76ee14")
-      ]
-    },
-    // Industria Textil
-    {
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3b04"),
       categoria: "Industria Textil",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee02"),
-        ObjectId("648e699dcf6d747f2e76ee0e")
-      ]
-    },
-    // Derechos Laborales
-    {
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3b05"),
       categoria: "Derechos Laborales",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee02"),
-        ObjectId("648e699dcf6d747f2e76ee0e")
-      ]
-    },
-    // Salud
-    {
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3b06"),
       categoria: "Salud",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee03"),
-        ObjectId("648e699dcf6d747f2e76ee11"),
-        ObjectId("648e699dcf6d747f2e76ee12")
-      ]
-    },
-    // Psicología
-    {
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3b07"),
       categoria: "Psicología",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee03")
-      ]
-    },
-    // Comercio
-    {
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3b08"),
       categoria: "Comercio",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee05")
-      ]
-    },
-    // Economía Informal
-    {
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3b09"),
       categoria: "Economía Informal",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee05")
-      ]
-    },
-    // Trabajo Doméstico
-    {
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3b0a"),
       categoria: "Trabajo Doméstico",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee06")
-      ]
-    },
-    // Historias de Vida
-    {
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3b0b"),
       categoria: "Historias de Vida",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee06"),
-        ObjectId("648e699dcf6d747f2e76ee0a")
-      ]
-    },
-    // Economía
-    {
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3b0c"),
       categoria: "Economía",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee07")
-      ]
-    },
-    // Desarrollo Social
-    {
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3b0d"),
       categoria: "Desarrollo Social",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee07")
-      ]
-    },
-    // Políticas Sociales
-    {
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3b0e"),
       categoria: "Políticas Sociales",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee08")
-      ]
-    },
-    // Prevención
-    {
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3b0f"),
       categoria: "Prevención",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee09")
-      ]
-    },
-    // Sociedad
-    {
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3b10"),
       categoria: "Sociedad",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee0a")
-      ]
-    },
-    // Legislación
-    {
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3b11"),
       categoria: "Legislación",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee0b")
-      ]
-    },
-    // Políticas Públicas
-    {
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3b12"),
       categoria: "Políticas Públicas",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee0b")
-      ]
-    },
-    // Industria Pesquera
-    {
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3b13"),
       categoria: "Industria Pesquera",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee0c")
-      ]
-    }
-  ]);
-  
+      posts_ids: []
+  }
+]);

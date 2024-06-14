@@ -1,139 +1,84 @@
 use("chs")
 
 db.Etiquetas.insertMany([
-    //En los Posts ID se agregan los que estan afiliados a las ETIQUETAS
-    {
-      _id: ObjectId(),
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3a01"),
       etiquetas: "trabajo infantil",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee01"),
-        ObjectId("648e699dcf6d747f2e76ee02"),
-        ObjectId("648e699dcf6d747f2e76ee03"),
-        ObjectId("648e699dcf6d747f2e76ee04"),
-        ObjectId("648e699dcf6d747f2e76ee05"),
-        ObjectId("648e699dcf6d747f2e76ee06"),
-        ObjectId("648e699dcf6d747f2e76ee07"),
-        ObjectId("648e699dcf6d747f2e76ee08"),
-        ObjectId("648e699dcf6d747f2e76ee09"),
-        ObjectId("648e699dcf6d747f2e76ee0a"),
-        ObjectId("648e699dcf6d747f2e76ee0b"),
-        ObjectId("648e699dcf6d747f2e76ee0c"),
-        ObjectId("648e699dcf6d747f2e76ee0d"),
-        ObjectId("648e699dcf6d747f2e76ee0e"),
-        ObjectId("648e699dcf6d747f2e76ee0f"),
-        ObjectId("648e699dcf6d747f2e76ee10"),
-        ObjectId("648e699dcf6d747f2e76ee11"),
-        ObjectId("648e699dcf6d747f2e76ee12"),
-        ObjectId("648e699dcf6d747f2e76ee13"),
-        ObjectId("648e699dcf6d747f2e76ee14")
-      ]
-    },
-    {
-      _id: ObjectId(),
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3a02"),
       etiquetas: "educación",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee01")
-      ]
-    },
-    {
-      _id: ObjectId(),
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3a03"),
       etiquetas: "condiciones laborales",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee02"),
-        ObjectId("648e699dcf6d747f2e76ee03"),
-        ObjectId("648e699dcf6d747f2e76ee0c")
-      ]
-    },
-    {
-      _id: ObjectId(),
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3a04"),
       etiquetas: "salud infantil",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee03")
-      ]
-    },
-    {
-      _id: ObjectId(),
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3a05"),
       etiquetas: "minería",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee04"),
-        ObjectId("648e699dcf6d747f2e76ee13")
-      ]
-    },
-    {
-      _id: ObjectId(),
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3a06"),
       etiquetas: "mercados",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee05")
-      ]
-    },
-    {
-      _id: ObjectId(),
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3a07"),
       etiquetas: "empleados domésticos",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee06")
-      ]
-    },
-    {
-      _id: ObjectId(),
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3a08"),
       etiquetas: "impacto económico",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee07")
-      ]
-    },
-    {
-      _id: ObjectId(),
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3a09"),
       etiquetas: "erradicación",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee08")
-      ]
-    },
-    {
-      _id: ObjectId(),
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3a0a"),
       etiquetas: "prevención",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee09")
-      ]
-    },
-    {
-      _id: ObjectId(),
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3a0b"),
       etiquetas: "experiencias",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee0a")
-      ]
-    },
-    {
-      _id: ObjectId(),
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3a0c"),
       etiquetas: "leyes",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee0b")
-      ]
-    },
-    {
-      _id: ObjectId(),
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3a0d"),
       etiquetas: "cacao",
-      posts_ids: [
-        ObjectId("648e699dcf6d747f2e76ee0d")
-      ]
-    },
-    {
-      "_id": ObjectId(),
-      "etiquetas": "talleres clandestinos",
-      "posts_ids": [
-        ObjectId("648e699dcf6d747f2e76ee0e")
-      ]
-    },
-    {
-      "_id": ObjectId(),
-      "etiquetas": "seguridad",
-      "posts_ids": [
-        ObjectId("648e699dcf6d747f2e76ee0f")
-      ]
-    },
-    {
-      "_id": ObjectId(),
-      "etiquetas": "producción de ladrillos",
-      "posts_ids": [
-        ObjectId("648e699dcf6d747f2e76ee10")
-      ]
-    },
-])
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3a0e"),
+      etiquetas: "talleres clandestinos",
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3a0f"),
+      etiquetas: "seguridad",
+      posts_ids: []
+  },
+  {
+      _id: ObjectId("60d5f3a5417b3c4d9c9e3a10"),
+      etiquetas: "producción de ladrillos",
+      posts_ids: []
+  },
+]);

@@ -1,0 +1,164 @@
+use("chs")
+
+
+db.Categorias.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3b01") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee01"),
+        ObjectId("648e699dcf6d747f2e76ee0d"),
+        ObjectId("648e699dcf6d747f2e76ee12"),
+        ObjectId("648e699dcf6d747f2e76ee14")
+    ]}}
+);
+
+db.Categorias.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3b02") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee01"),
+        ObjectId("648e699dcf6d747f2e76ee08"),
+        ObjectId("648e699dcf6d747f2e76ee09")
+    ]}}
+);
+
+db.Categorias.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3b03") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee01"),
+        ObjectId("648e699dcf6d747f2e76ee02"),
+        ObjectId("648e699dcf6d747f2e76ee03"),
+        ObjectId("648e699dcf6d747f2e76ee04"),
+        ObjectId("648e699dcf6d747f2e76ee05"),
+        ObjectId("648e699dcf6d747f2e76ee06"),
+        ObjectId("648e699dcf6d747f2e76ee07"),
+        ObjectId("648e699dcf6d747f2e76ee08"),
+        ObjectId("648e699dcf6d747f2e76ee09"),
+        ObjectId("648e699dcf6d747f2e76ee0a"),
+        ObjectId("648e699dcf6d747f2e76ee0b"),
+        ObjectId("648e699dcf6d747f2e76ee0c"),
+        ObjectId("648e699dcf6d747f2e76ee0d"),
+        ObjectId("648e699dcf6d747f2e76ee0e"),
+        ObjectId("648e699dcf6d747f2e76ee0f"),
+        ObjectId("648e699dcf6d747f2e76ee10"),
+        ObjectId("648e699dcf6d747f2e76ee11"),
+        ObjectId("648e699dcf6d747f2e76ee12"),
+        ObjectId("648e699dcf6d747f2e76ee13"),
+        ObjectId("648e699dcf6d747f2e76ee14")
+    ]}}
+);
+
+db.Categorias.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3b04") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee02"),
+        ObjectId("648e699dcf6d747f2e76ee0e")
+    ]}}
+);
+
+db.Categorias.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3b05") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee02"),
+        ObjectId("648e699dcf6d747f2e76ee0e")
+    ]}}
+);
+
+db.Categorias.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3b06") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee03"),
+        ObjectId("648e699dcf6d747f2e76ee11"),
+        ObjectId("648e699dcf6d747f2e76ee12")
+    ]}}
+);
+
+db.Categorias.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3b07") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee03")
+    ]}}
+);
+
+db.Categorias.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3b08") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee05")
+    ]}}
+);
+
+db.Categorias.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3b09") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee05")
+    ]}}
+);
+
+db.Categorias.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3b0a") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee06")
+    ]}}
+);
+
+db.Categorias.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3b0b") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee06"),
+        ObjectId("648e699dcf6d747f2e76ee0a")
+    ]}}
+);
+
+db.Categorias.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3b0c") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee07")
+    ]}}
+);
+
+db.Categorias.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3b0d") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee07")
+    ]}}
+);
+
+db.Categorias.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3b0e") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee08")
+    ]}}
+);
+
+db.Categorias.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3b0f") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee09")
+    ]}}
+);
+
+db.Categorias.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3b10") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee0a")
+    ]}}
+);
+
+db.Categorias.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3b11") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee0b")
+    ]}}
+);
+
+db.Categorias.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3b12") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee0b")
+    ]}}
+);
+
+db.Categorias.updateOne(
+    { _id: ObjectId("60d5f3a5417b3c4d9c9e3b13") },
+    { $set: { posts_ids: [
+        ObjectId("648e699dcf6d747f2e76ee0c")
+    ]}}
+);

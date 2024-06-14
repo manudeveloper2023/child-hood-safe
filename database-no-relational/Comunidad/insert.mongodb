@@ -8,7 +8,7 @@ db.Comunidad.insertMany(
             fecha_creacion: new Date(),
             creador_comunidad: {
                 alias: "juanito_perez",
-                user_id: ObjectId("6666f77c0737080b4cd69bfd")
+                usuario_id: ObjectId("6666f77c0737080b4cd69bfd")
             },
             usuarios_ids: [ObjectId("6666f77c0737080b4cd69bfd")],
             posts_ids: []
@@ -20,7 +20,7 @@ db.Comunidad.insertMany(
             fecha_creacion: new Date(),
             creador_comunidad: {
                 alias: "laura_garcia",
-                user_id: ObjectId("6666f77c0737080b4cd69bfe")
+                usuario_id: ObjectId("6666f77c0737080b4cd69bfe")
             },
             usuarios_ids: [ObjectId("6666f77c0737080b4cd69bfe")],
             posts_ids: []
@@ -32,7 +32,7 @@ db.Comunidad.insertMany(
             fecha_creacion: new Date(),
             creador_comunidad: {
                 alias: "carlos_rodriguez",
-                user_id: ObjectId("6666f77c0737080b4cd69bff")
+                usuario_id: ObjectId("6666f77c0737080b4cd69bff")
             },
             usuarios_ids: [ObjectId("6666f77c0737080b4cd69bff")],
             posts_ids: []
@@ -44,7 +44,7 @@ db.Comunidad.insertMany(
             fecha_creacion: new Date(),
             creador_comunidad: {
                 alias: "ana_martinez",
-                user_id: ObjectId("6666f77c0737080b4cd69c00")
+                usuario_id: ObjectId("6666f77c0737080b4cd69c00")
             },
             usuarios_ids: [ObjectId("6666f77c0737080b4cd69c00")],
             posts_ids: []
@@ -56,7 +56,7 @@ db.Comunidad.insertMany(
             fecha_creacion: new Date(),
             creador_comunidad: {
                 alias: "david_sanchez",
-                user_id: ObjectId("6666f77c0737080b4cd69c01")
+                usuario_id: ObjectId("6666f77c0737080b4cd69c01")
             },
             usuarios_ids: [ObjectId("6666f77c0737080b4cd69c01")],
             posts_ids: []
@@ -68,7 +68,7 @@ db.Comunidad.insertMany(
             fecha_creacion: new Date(),
             creador_comunidad: {
                 alias: "sara_gomez",
-                user_id: ObjectId("6666f77c0737080b4cd69c02")
+                usuario_id: ObjectId("6666f77c0737080b4cd69c02")
             },
             usuarios_ids: [ObjectId("6666f77c0737080b4cd69c02")],
             posts_ids: []
@@ -80,7 +80,7 @@ db.Comunidad.insertMany(
             fecha_creacion: new Date(),
             creador_comunidad: {
                 alias: "sergio_fernandez",
-                user_id: ObjectId("6666f77c0737080b4cd69c03")
+                usuario_id: ObjectId("6666f77c0737080b4cd69c03")
             },
             usuarios_ids: [ObjectId("6666f77c0737080b4cd69c03")],
             posts_ids: []
@@ -92,7 +92,7 @@ db.Comunidad.insertMany(
             fecha_creacion: new Date(),
             creador_comunidad: {
                 alias: "maria_lopez",
-                user_id: ObjectId("6666f77c0737080b4cd69c04")
+                usuario_id: ObjectId("6666f77c0737080b4cd69c04")
             },
             usuarios_ids: [ObjectId("6666f77c0737080b4cd69c04")],
             posts_ids: []
@@ -104,7 +104,7 @@ db.Comunidad.insertMany(
             fecha_creacion: new Date(),
             creador_comunidad: {
                 alias: "javier_martin",
-                user_id: ObjectId("6666f77c0737080b4cd69c05")
+                usuario_id: ObjectId("6666f77c0737080b4cd69c05")
             },
             usuarios_ids: [ObjectId("6666f77c0737080b4cd69c05")],
             posts_ids: []
@@ -116,7 +116,7 @@ db.Comunidad.insertMany(
             fecha_creacion: new Date(),
             creador_comunidad: {
                 alias: "natalia_diaz",
-                user_id: ObjectId("6666f77c0737080b4cd69c06")
+                usuario_id: ObjectId("6666f77c0737080b4cd69c06")
             },
             usuarios_ids: [ObjectId("6666f77c0737080b4cd69c06")],
             posts_ids: []
@@ -128,7 +128,7 @@ db.Comunidad.insertMany(
             fecha_creacion: new Date(),
             creador_comunidad: {
                 alias: "pedro_ramirez",
-                user_id: ObjectId("6666f77c0737080b4cd69c07")
+                usuario_id: ObjectId("6666f77c0737080b4cd69c07")
             },
             usuarios_ids: [ObjectId("6666f77c0737080b4cd69c07")],
             posts_ids: []
@@ -140,7 +140,7 @@ db.Comunidad.insertMany(
             fecha_creacion: new Date(),
             creador_comunidad: {
                 alias: "lucia_morales",
-                user_id: ObjectId("6666f77c0737080b4cd69c08")
+                usuario_id: ObjectId("6666f77c0737080b4cd69c08")
             },
             usuarios_ids: [ObjectId("6666f77c0737080b4cd69c08")],
             posts_ids: []
@@ -152,7 +152,7 @@ db.Comunidad.insertMany(
             fecha_creacion: new Date(),
             creador_comunidad: {
                 alias: "alberto_gonzalez",
-                user_id: ObjectId("6666f77c0737080b4cd69c09")
+                usuario_id: ObjectId("6666f77c0737080b4cd69c09")
             },
             usuarios_ids: [ObjectId("6666f77c0737080b4cd69c09")],
             posts_ids: []
@@ -164,7 +164,7 @@ db.Comunidad.insertMany(
             fecha_creacion: new Date(),
             creador_comunidad: {
                 alias: "paula_ruiz",
-                user_id: ObjectId("6666f77c0737080b4cd69c0a")
+                usuario_id: ObjectId("6666f77c0737080b4cd69c0a")
             },
             usuarios_ids: [ObjectId("6666f77c0737080b4cd69c0a")],
             posts_ids: []
@@ -176,7 +176,7 @@ db.Comunidad.insertMany(
             fecha_creacion: new Date(),
             creador_comunidad: {
                 alias: "diego_hernandez",
-                user_id: ObjectId("6666f77c0737080b4cd69c0b")
+                usuario_id: ObjectId("6666f77c0737080b4cd69c0b")
             },
             usuarios_ids: [ObjectId("6666f77c0737080b4cd69c0b")],
             posts_ids: []
@@ -188,7 +188,7 @@ db.Comunidad.insertMany(
             fecha_creacion: new Date(),
             creador_comunidad: {
                 alias: "patricia_fernandez",
-                user_id: ObjectId("6666f77c0737080b4cd69c0c")
+                usuario_id: ObjectId("6666f77c0737080b4cd69c0c")
             },
             usuarios_ids: [ObjectId("6666f77c0737080b4cd69c0c")],
             posts_ids: []
@@ -200,7 +200,7 @@ db.Comunidad.insertMany(
             fecha_creacion: new Date(),
             creador_comunidad: {
                 alias: "alejandro_garcia",
-                user_id: ObjectId("6666f77c0737080b4cd69c0d")
+                usuario_id: ObjectId("6666f77c0737080b4cd69c0d")
             },
             usuarios_ids: [ObjectId("6666f77c0737080b4cd69c0d")],
             posts_ids: []

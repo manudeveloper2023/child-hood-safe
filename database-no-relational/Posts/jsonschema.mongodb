@@ -42,11 +42,10 @@ db.createCollection('Posts', {
                     }, 
                     description : 'Datos del creador del post'
                 },
-                categorias : { // Desnormalizado | Relacion 1 a pocos | Un post cuando se crea puede poseer categorias | Rango : [ 1 - 5 ] elementos
+                categorias : { // Desnormalizado | Relacion muchos a muchos | Un post cuando se crea puede poseer categorias | Rango : [ 1 - * ] elementos
                     bsonType : 'array' , 
                     uniqueItems: true, 
                     minItems : 1 ,
-                    maxItems : 5 , 
                     items : { // Rango [ 0 , 100 ] caracteres
                         bsonType: 'string',
                         maxLength: 100,
@@ -54,11 +53,10 @@ db.createCollection('Posts', {
                     }, 
                     description : 'Lista de los nombres de las  categorias con valores únicos y el mínimo de 1 solo valor'
                 },
-                etiquetas : { // Desnormalizado | Relacion 1 a pocos | Un post cuando se crea puede poseer etiquetas | Rango : [ 1 - 10 ] elementos 
+                etiquetas : { // Desnormalizado | Relacion muchos a muchos  | Un post cuando se crea puede poseer etiquetas | Rango : [ 1 -  * ] elementos 
                     bsonType : 'array' , 
                     uniqueItems : true , 
                     minItems : 1 , 
-                    maxItems : 10 , 
                     items : { // Rango [ 0 , 100 ] caracteres   
                         bsonType : 'string' ,   
                         maxLength: 100,
@@ -70,7 +68,7 @@ db.createCollection('Posts', {
                     bsonType: 'array',
                     uniqueItems : true , 
                     items : {
-                        bsonType  :'objectId'  
+                          bsonType  :'objectId'  
                     },
                     description: 'Lista de IDs de los comentarios asociados al post'
                 }

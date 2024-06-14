@@ -34,7 +34,7 @@ db.createCollection("Denuncia_Anonima", {
                         enum : ['F' , 'M'] , 
                         description: 'Sexo del menor' 
                     }, 
-                    aproximacion_edad: {
+                    aproximacion_edad: { // Relacion 1 a 1 | Una descripcion menor solo tendra una aproximacion de la edad del menor
                         bsonType: 'object',
                         required: ['edad_menor', 'edad_mayor'],
                         additionalProperties: false,
@@ -54,12 +54,12 @@ db.createCollection("Denuncia_Anonima", {
                         },
                         description: 'Aproximación de edad del menor'
                     }, 
-                    tonalidad_piel: { // Rango [ 0 - 20 ]
+                    tonalidad_piel: { // Rango [ 0 - 20 ] caracteres
                         bsonType: 'string',
                         maxLength : 20 , 
                         description: 'Tonalidad de piel del menor'
                     },
-                    estado_fisico: { // Relacion 1 a pocos | El usuario puede registrar los estados fisicos del menor | Rango [1 , ] elementos
+                    estado_fisico: { // Relacion 1 a pocos | El usuario puede registrar los estados fisicos del menor | Rango [1 - *  ] elementos
                         bsonType: 'array',
                         minItems: 1,
                         uniqueItems: true,
@@ -70,7 +70,7 @@ db.createCollection("Denuncia_Anonima", {
                         },
                         description: 'Lista de descripciones del estado físico del menor'
                     }, 
-                    trabajo_ilegal: { // Relacion 1 a pocos | El usuario puede registrar el trabajo ilegal del menro | Rango [ 1 , ] elementos 
+                    trabajo_ilegal: { // Relacion 1 a pocos | El usuario puede registrar el trabajo ilegal del menro | Rango [ 1 - * ] elementos 
                         bsonType: 'array',
                         minItems: 1,
                         uniqueItems: true,
@@ -81,7 +81,7 @@ db.createCollection("Denuncia_Anonima", {
                         },
                         description: 'Lista de tipos de trabajo ilegal realizados por el menor'
                     },
-                    prendas: { // Relacion 1 a 1 | El usuario puede registrar las prendas que lleva el menor | Rango [ 1 , ] subdocumentos
+                    prendas: { // Relacion 1 a 1 | El usuario puede registrar las prendas que lleva el menor | Rango [ 1 - * ] subdocumentos
                         bsonType: 'object',
                         required: ['descripcion_ropa'],
                         additionalProperties: false,
@@ -90,7 +90,7 @@ db.createCollection("Denuncia_Anonima", {
                                 bsonType: 'string',
                                 description: 'Descripción de la ropa del menor'
                             },
-                            estado_ropa: { // Relacion 1 a pocos | La ropa puede tener muchos estados | Rango [ 1 , ] elementos 
+                            estado_ropa: { // Relacion 1 a pocos | La ropa puede tener muchos estados | Rango [ 1 - * ] elementos 
                                 bsonType: 'array',
                                 minItems: 1,
                                 uniqueItems: true,
@@ -103,8 +103,8 @@ db.createCollection("Denuncia_Anonima", {
                         },
                         description: 'Información sobre la vestimenta del menor'
                     }
-                }, // Fin de Descripcion Menor
-            },
+                },
+            }, // Fin de Descripcion Menor
             dificultad: {
                 enum: ['Moderado', 'Desafiante'],
                 description: 'Nivel de dificultad o gravedad de la situación reportada en la denuncia'

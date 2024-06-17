@@ -1,0 +1,18 @@
+use("chs")
+db.Comentario.aggregate([
+    { $match: { comentario: { $regex: "medidas", $options: "i" } } }, 
+    {
+        $lookup: {
+            from: "Comentario",
+            localField: "respuestas", 
+            foreignField: "_id", 
+            as: "respuestas_detalles"
+        }
+    }
+])
+
+
+
+
+    
+    

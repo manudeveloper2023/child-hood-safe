@@ -1,15 +1,28 @@
 use("chs")
-db.Comentario.aggregate([
-    { $match: { comentario: { $regex: "medidas", $options: "i" } } }, 
-    {
-        $lookup: {
-            from: "Comentario",
-            localField: "respuestas", 
-            foreignField: "_id", 
-            as: "respuestas_detalles"
+db.Comentario.aggregate(
+    [
+        {
+            $group : {
+                _id : "$creador_comentario.usuario_id",
+                alias: { $first: "$creador_comentario.alias" },    
+                contadorComentarios : {
+                    $sum : 1 
+                } , 
+                comentarios: {
+                    $push: {
+                        fecha_publicado: "$fecha_publicado",
+                        comentario: "$comentario"
+                    }
+                }
+            }
+        },
+        {
+            $project: {
+               _id : 0 
+            }
         }
-    }
-])
+    ]
+)
 
 
 
